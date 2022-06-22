@@ -9,13 +9,12 @@
 .nav-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-
     height: 100px;
-    width: 100%;
+    margin-left: 2.5rem;
 }
 
 .nav-logo img {
+    height: 70px;
     object-fit: cover;
 }
 
@@ -25,7 +24,7 @@
 }
 
 .nav-link {
-    padding: 0.5rem 0rem 0.5rem 2rem;
+    padding: 0.5rem 0rem 0.5rem 3rem;
     text-decoration: none;
     color: whitesmoke;
 }
