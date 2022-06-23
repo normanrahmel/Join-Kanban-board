@@ -1,0 +1,6 @@
+function creatHTMLshowSettings() {
+    return /*html*/ `
+    
+    
+    `;
+}

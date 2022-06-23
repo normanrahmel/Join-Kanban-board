@@ -1,7 +1,8 @@
 function creatHTMLshowHelp() {
     return /*html*/ `
-    <!DOCTYPE html>
-<html lang="en">
+    <!--Die Bilder dienen als Platzhalter-->
+<!DOCTYPE html>
+    <html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,24 +11,22 @@ function creatHTMLshowHelp() {
 
     <script src="./js/include_html.js"></script>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/help.css">
 
     <title>Help</title>
     <link rel="icon" href="./img/favicon.png" type="image/x-icon">
 </head>
 
-<body onload="includeHTML();">
+<body>
 
-    <div w3-include-html="html_templates/menu.html"></div>
-    <div class="wrapper  py-5">
-        <div class="container-xxl px-4">
+    <div class="mrg-lft">
+        <div>
             <h1>Help</h1>
-            <p class="help-text">Join is a Kanban board. It gives you an overview of your current work situation and helps visualising the project flow in agile project management. </p>
+            <p class="help-text">Join is a Kanban board. <br> It gives you an overview of your current work situation and helps visualising the project flow in agile project management. </p>
             <div class="ci-border-dark p-2">
-                This app was built as a training project at Developer Akademie. There is no security layer implemented. The app is not supposed to be used with real life data. <strong>Do not enter personal data.</strong>
+                This app was built as a training project at Developer Akademie. 
             </div>
-
             <div class="help-sections">
                 <h4><b>Add a task</b></h4>
                 <ul class="help-text">
@@ -43,7 +42,7 @@ function creatHTMLshowHelp() {
                 <ul class="help-text">
                     <li>On the board each task passes through 4 stages.</li>
                     <li>The tasks can simply be moved by drag and drop.</li>
-                    <li>On touch-screens, clicking on the swipe icon <img src="./img/swipe.png" class="trashbin"> moves the task to the next status. From "DONE" it will be moved to "TODO" again in order to allow all possible status changes.</li>
+                    <li>On touch-screens, clicking on the swipe icon <img src="./img/swipe.png" class="trashbin"> moves the task to the next status. <br> From "DONE" it will be moved to "TODO" again in order to allow all possible status changes.</li>
                     <li>After a task has been completed, it can either be archived or deleted.</li>
                     <li>The color of the left border of each task illustrates its importance level.</li>
                     <li>By clicking on the task you can see and edit all details.</li>
@@ -74,7 +73,7 @@ function creatHTMLshowHelp() {
                 <ul class="help-text">
                     <li>All tasks that are deleted end up in the recycle bin.</li>
                     <li>It prevents tasks from being deleted accidentally.</li>
-                    <li>Tasks that were deleted from the board can be restored to the "TODO" section of the board. Tasks that were deleted from the backlog will be restored there.</li>
+                    <li>Tasks that were deleted from the board can be restored to the "TODO" section of the board. <br> Tasks that were deleted from the backlog will be restored there.</li>
                     <li>Deleting from the recycle bin cannot be undone.</li>
                 </ul>
                 <img class="help-img" src="img/Backlog.PNG" alt="Trash" title="Trash">
@@ -83,7 +82,7 @@ function creatHTMLshowHelp() {
                 <h4><b>The Settings</b></h4>
                 <ul class="help-text">
                     <li>Each task can be assigned to a limited number of team members.</li>
-                    <li>We recommend to restrict this number to 1 or 2, in order to facilitate a clear structure of tasks and responsibilities. Consider splitting tasks that seem to require more contributors. </li>
+                    <li>We recommend to restrict this number to 1 or 2, in order to facilitate a clear structure of tasks and responsibilities. <br> Consider splitting tasks that seem to require more contributors. </li>
                 </ul>
                 <img class="help-img" src="img/Backlog.PNG" alt="Settings" title="Settings">
             </div>

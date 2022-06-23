@@ -6,19 +6,22 @@ body {
     width: 100vw;
 }
 
+
 /* ----- Font-Classes ----- */
 
-html{
+html {
     font-size: 16px;
 }
 
 .ft-reg {
-    font-size: 1.25rem;     /* 20px */
+    font-size: 1.25rem;
+    /* 20px */
 }
 
 .ft-bld {
     font-weight: 700;
-    font-size: 1.25rem;     /* 20px */
+    font-size: 1.25rem;
+    /* 20px */
 }
 
 
@@ -32,13 +35,18 @@ html{
     margin-bottom: 16px;
 }
 
-.pdg-btm {
-    padding-bottom: 16px;
+.mrg-rgt {
+    margin-right: 16px;
+}
+
+.mrg-lft {
+    margin-left: 16px;
 }
 
 .txt-left {
     text-align: left;
 }
+
 
 /* ----- for active switch on Nav-Links ----- */
 
@@ -51,9 +59,35 @@ html{
 }
 
 
-
 /* ----- Bitte noch einsortieren ----- */
-.board-right-side{
+
+.board-right-side {
     width: calc(100vw - 180px);
 }
 
+
+/*Button*/
+
+.btn-1 {
+    background-image: linear-gradient(92.88deg, #49708a 9.16%, #49708a 43.89%, #49708a 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-weight: 500;
+    height: 6rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-1 {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+}

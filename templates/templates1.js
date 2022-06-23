@@ -1,5 +1,5 @@
 function creatHTMLshowBoard() {
-    return /*html*/`
+    return /*html*/ `
         <div class="board-right-side">
             <div class="board-section">
                 <h2>to do</h2>
@@ -40,13 +40,13 @@ function creatHTMLshowBoard() {
 
             </div>
         </div>`
-    
-    
+
+
 }
 
 
 function creatHTMLshowBacklog() {
-    return /*html*/`
+    return /*html*/ `
         <div>
             Header
         </div>
@@ -63,7 +63,7 @@ function creatHTMLshowBacklog() {
 
 
 function creatHTMLshowAddTask() {
-    return /*html*/`
+    return /*html*/ `
         <div>
             Header
         </div>
