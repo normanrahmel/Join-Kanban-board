@@ -1,0 +1,37 @@
+/* ----- Navigation Classes ----- */
+
+.left-side-cmpl {
+    width: 180px;
+    background-color: #4A708B;
+    align-items: start;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-left: 2.5rem;
+}
+
+.nav-logo img {
+    height: 70px;
+    object-fit: cover;
+}
+
+.navbar-nav {
+    display: flex;
+    width: 100%;
+}
+
+.nav-link {
+    padding: 0.5rem 0rem 0.5rem 3rem;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav-menu {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+
