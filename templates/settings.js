@@ -1,6 +1,0 @@
-function creatHTMLshowSettings() {
-    return /*html*/ `
-    
-    
-    `;
-}
