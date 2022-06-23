@@ -10,13 +10,11 @@ function creatHTMLshowPrivacy() {
     <link rel="icon" href="./img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
-   
-    
-
     <title>Join KanBan Board</title>
 </head>
+
 <body>
-  <div class="ft-reg mrg-lft mrg-rgt mrg-btm">
+  <div class="ft-reg mrg-lft mrg-rgt mrg-btm section-privacy">
 <h1>Datenschutzerklärung <br> Privacy Notice
 </h1>
 <p>This app was built as a training project at Developer Akademie. There is no security layer implemented. <br> It is not supposed to be used with real life data. Do not enter personal data.</p>
@@ -73,9 +71,7 @@ function creatHTMLshowPrivacy() {
 <p></p>
 <p><em>Die Datenschutzerklärung wurde mithilfe der activeMind AG erstellt, den Experten für <a href="https://www.activemind.de/datenschutz/datenschutzbeauftragter/" target="_blank" rel="noopener">externe Datenschutzbeauftragte</a> (Version #2020-09-30).</em></p> 
 </div>
-
-    
-</body>
+    </body>
 </html>
 
     `;

@@ -1,6 +1,6 @@
 body {
     word-wrap: break-word;
-    max-width: 90vw;
+    max-width: 90vw !important;
 }
 
 h1 {
@@ -29,17 +29,5 @@ h1 {
     .help-img {
         width: 80%;
         margin: 0;
-    }
-}
-
-@media(min-width:768px) {
-    .wrapper {
-        padding-left: var(--menu-width);
-    }
-}
-
-@media(max-width:768px) {
-    .wrapper {
-        margin-bottom: 10vh;
     }
 }

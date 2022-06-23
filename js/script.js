@@ -1,5 +1,6 @@
 let tasks = [];
 
+
 async function firstrender() {
     // alert('Hi meine großartigen Teamkollegen');
     await loadTasks();
@@ -20,11 +21,25 @@ async function loadTasks() {
 
 
 function show(section) {
-    document.getElementById('rightSideComplete').innerHTML =
-        section;
+    document.getElementById('rightSideComplete').innerHTML = section;
 
 }
 
+
+function switchNavButton() {
+    let activeButton = document.getElementsByClassName('active');
+    let disabledButton = document.getElementsByClassName('border-lft');
+    if (condition) {
+
+    } else {
+
+    }
+
+
+
+
+
+}
 
 function addTask() {
 
