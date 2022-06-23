@@ -3,7 +3,7 @@
         "urgency":"1",
         "date" : "23.06.2022",
         "title" : "Probetitel",
-        "discription" : "ein Text zur Probe",
+        "discription" : "Dieser Text wurde aus ein Backend geladen ;P",
         "category" : "Test",
         "employees" : "Marco",
         "show":"board-ToDo"

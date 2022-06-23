@@ -1,34 +1,43 @@
-let notes = [];
+let tasks = [];
 
 async function firstrender(){
     // alert('Hi meine großartigen Teamkollegen');
-    loadNotes();
+    await loadTasks();
+    show(creatHTMLshowBoard());
+    fillBoard();
 }
 
 
-async function loadNotes() {
-    let notesJSONAsText = localStorage.getItem('notesJSON');
+async function loadTasks() {
+    let tasksJSONAsText = localStorage.getItem('tasksJSON');
 
-    if (notesJSONAsText) {   //fängt Fehlermeldung ab, falls noch kein Array existiert
-        notes = JSON.parse(notesJSONAsText);
+    if (tasksJSONAsText) {   //fängt Fehlermeldung ab, falls noch kein Array existiert
+        tasks = JSON.parse(tasksJSONAsText);
     }else{      // beim ersten Start wird ein Beispiel aus der JSON geladen 
-        notes = await loadNoteJSON_API();
+        tasks = await loadTasksJSON_API();
     }
 }
 
 
-function addNote(){
-
-    let newNoteASJSON = creatNotesJSON();
+function show(section){
+    document.getElementById('rightSideComplete').innerHTML =
+        section;
     
-    console.log(newNoteASJSON);
-
-    notes.push(newNoteASJSON);
-    saveNotes();
 }
 
 
-function creatNotesJSON(){
+function addTask(){
+
+    let newTaskASJSON = creatTaskJSON();
+    
+    console.log(newTaskASJSON);
+
+    tasks.push(newTaskASJSON);
+    saveTasks();
+}
+
+
+function creatTaskJSON(){
     let title = document.getElementById('taskTitle').value;
     let date = document.getElementById('taskDate').value;
     let category = document.getElementById('taskCategory').value;
@@ -41,14 +50,43 @@ function creatNotesJSON(){
 }
 
 
-function saveNotes(){
-    let notesJSONAsText = JSON.stringify(notes); 
+function saveTasks(){
+    let tasksJSONAsText = JSON.stringify(tasks); 
     
-    localStorage.setItem('notesJSON', notesJSONAsText); 
+    localStorage.setItem('tasksJSON', tasksJSONAsText); 
 }
 
 
-async function loadNoteJSON_API(){
+async function loadTasksJSON_API(){
     let responseAsText = await fetch('./JSON/storage.json');
     return responseJSON = await responseAsText.json();
+}
+
+
+function fillBoard(){
+    console.log('Test');
+
+    for (let numer = 0; numer < tasks.length; numer++) {
+        let task = tasks[numer];
+
+        if (task.show == "board-ToDo"){
+            document.getElementById('boardToDoContent').innerHTML += /*html*/`
+                <div class="board-notecard">
+                    <div class="board-notecard-date">
+                        ${task.date}</div>
+
+                    <h3 class="ft-bld">${task.title}</h3>
+
+                    <div class="board-notecard-discription">${task.discription}</div>
+
+                    <div class="board-notecard-bottom">
+                        <div>${task.category}</div>
+
+                        <div>${task.employees}</div>
+                    </div>
+
+                </div>`
+        }
+        
+    }
 }

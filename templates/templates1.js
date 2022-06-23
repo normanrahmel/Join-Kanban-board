@@ -1,50 +1,6 @@
-<!DOCTYPE html>
-<html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/board.css">
-    <script src="./js/script.js"></script>
-    <script src="./templates/templates1.js"></script>
-
-    <title>Join KanBan Board</title>
-</head>
-
-<body onload="firstrender()">
-    <div class="left-side-cmpl flex-col ft-reg">
-        <div class="nav-logo">
-            <img src="img/newLogo.png" class="main-logo">
-        </div>
-        <div class="nav-menu flex-col">
-            <div class="navbar-nav flex-col">
-                <a onclick="show(creatHTMLshowBoard()); fillBoard()" href="#" class="nav-link active">Board</a>
-                <a onclick="show(creatHTMLshowBacklog())" href="#" class="nav-link border-lft">Backlog</a>
-                <a onclick="show(creatHTMLshowAddTask())" href="#" class="nav-link border-lft">Add task</a>
-                <a href="#" class="nav-link border-lft">Archive</a>
-                <a href="#" class="nav-link border-lft">Trash</a>
-                <hr style="width:90px; margin:1rem 2.5rem">
-                <a href="#" class="nav-link border-lft">Help</a>
-                <a href="#" class="nav-link border-lft">Settings</a>
-                <a href="#" class="nav-link border-lft">About</a>
-                <a href="#" class="nav-link border-lft">Privacy</a>
-                <hr style="width:90px; margin:1rem 2.5rem">
-                <a href="#" class="nav-link border-lft">Logout</a>
-            </div>
-
-
-        </div>
-    </div>
-    <div class="right-side-cmpl" id="rightSideComplete">
-
-<!-- Board -->
-
-        <!-- <div class="board-right-side">
+function creatHTMLshowBoard() {
+    return /*html*/`
+        <div class="board-right-side">
             <div class="board-section">
                 <h2>to do</h2>
 
@@ -57,7 +13,7 @@
 
                 <div id="boardInProgressContent"></div>
 
-                <div class="board-notecard">
+                <!-- <div class="board-notecard">
                     <div class="board-notecard-date">Fertigstellung zum...</div>
                     <h3 class="ft-bld">Titel</h3>
                     <div class="board-notecard-discription">Beschreibung</div>
@@ -66,7 +22,7 @@
                         <div>Bild</div>
                     </div>
 
-                </div>
+                </div> -->
 
             </div>
 
@@ -83,32 +39,37 @@
                 <div id="boardToneContent"></div>
 
             </div>
-        </div> -->
-
-<!-- Backlog -->
-
-<!-- <div>
-    Header
-</div>
-
-<div>
-    <div>Employees</div>
-    <div>Category</div>
-    <div>title</div>
-    <div>discription</div>
-    <div>urgency</div>
-    <div>date</div>
-</div> -->
+        </div>`
+    
+    
+}
 
 
+function creatHTMLshowBacklog() {
+    return /*html*/`
+        <div>
+            Header
+        </div>
 
-<!-- Add task -->
-        
-        <!-- <div>
+        <div>
+            <div>Employees</div>
+            <div>Category</div>
+            <div>title</div>
+            <div>discription</div>
+            <div>urgency</div>
+            <div>date</div>
+        </div>`
+}
+
+
+function creatHTMLshowAddTask() {
+    return /*html*/`
+        <div>
             Header
         </div>
 
         <form class="form-example" onsubmit="addNote()"> 
+            <!-- action="" method="get" -->
 
             <div class="form-example">
               <label for="taskTitle">Title: </label>
@@ -144,11 +105,6 @@
               <input type="submit" value="Subscribe!">
             </div>
 
-          </form> -->
-
-
-
-    </div>
-</body>
-
-</html>
+          </form>
+        `
+}
