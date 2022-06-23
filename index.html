@@ -15,7 +15,7 @@
     <title>Join KanBan Board</title>
 </head>
 
-<body>
+<body onload="firstrender()">
     <div class="left-side-cmpl flex-col ft-reg">
         <div class="nav-logo">
             <img src="img/newLogo.png" class="main-logo">
@@ -58,7 +58,7 @@
 
                 <div class="board-notecard">
                     <div class="board-notecard-date">Fertigstellung zum...</div>
-                    <h3>Titel</h3>
+                    <h3 class="ft-bld">Titel</h3>
                     <div class="board-notecard-discription">Beschreibung</div>
                     <div class="board-notecard-bottom">
                         <div>Category</div>
@@ -84,36 +84,60 @@
             </div>
         </div>
 
+<!-- Backlog -->
+
+<div>
+    Header
+</div>
+
+<div>
+    <div>Employees</div>
+    <div>Category</div>
+    <div>title</div>
+    <div>discription</div>
+    <div>urgency</div>
+    <div>date</div>
+</div>
+
+
+
 <!-- Add task -->
         
         <div>
             Header
         </div>
 
-        <form action="" method="get" class="form-example">
+        <form class="form-example" onsubmit="addNote()"> 
+            <!-- action="" method="get" -->
+
             <div class="form-example">
-              <label for="name">Enter your name: </label>
-              <input type="text" name="name" id="name" required>
+              <label for="taskTitle">Title: </label>
+              <input type="text" id="taskTitle" placeholder="..." required>
             </div>
 
             <div class="form-example">
-              <label for="email">Enter your email: </label>
-              <input type="email" name="email" id="email" required>
+              <label for="taskDate">Due Date: </label>
+              <input type="date" id="taskDate" placeholder="..." required>
             </div>
 
             <div class="form-example">
-                <label for="email">Enter your email: </label>
-                <input type="email" name="email" id="email" required>
+                <label for="taskCategory">Category: </label>
+                <input type="text" id="taskCategory" placeholder="..." required>
             </div>
             
             <div class="form-example">
-                <label for="email">Enter your email: </label>
-                <input type="email" name="email" id="email" required>
+                <label for="taskUrgency">Urgency: </label>
+                <input type="number" min="1" max="3" id="taskUrgency" placeholder="1-3" required>
             </div>
 
             <div class="form-example">
-                <label for="email">Enter your email: </label>
-                <input type="email" name="email" id="email" required>
+                <label for="taskDescription">Description: </label>
+                <input type="text" id="taskDescription" placeholder="..." required>
+            </div>
+
+            <div class="form-example">
+                <label for="taskEmployees">Employees: </label>
+                <input type="text" id="taskEmployees" placeholder="..." required>
             </div>
 
             <div class="form-example">

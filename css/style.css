@@ -1,7 +1,3 @@
-html{
-    font-size: 16px;
-}
-
 body {
     font-family: 'PT Sans', sans-serif;
     display: flex;
@@ -10,16 +6,23 @@ body {
     width: 100vw;
 }
 
-/* ----- Multifunctional Classes ----- */
+/* ----- Font-Classes ----- */
+
+html{
+    font-size: 16px;
+}
 
 .ft-reg {
-    font-size: 20px;
+    font-size: 1.25rem;     /* 20px */
 }
 
 .ft-bld {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25rem;     /* 20px */
 }
+
+
+/* ----- Multifunctional Classes ----- */
 
 .flex-col {
     flex-direction: column;
