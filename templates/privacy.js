@@ -61,7 +61,7 @@ function creatHTMLshowPrivacy() {
 <p>Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung
     dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p>
 <h3>Empfänger eines Widerspruchs</h3>
-<p>Norman Rahmel</p>
+<p>Norman Rahmel, Marcel de Zanna, Marco Hilliges</p>
 <hr>
 <h2>Änderung unserer Datenschutzbestimmungen</h2>
 <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren
