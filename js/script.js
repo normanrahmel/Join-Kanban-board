@@ -26,14 +26,122 @@ function show(section) {
 }
 
 
-function switchNavButton() {
-    let activeButton = document.getElementsByClassName('active');
-    let disabledButton = document.getElementsByClassName('border-lft');
-    if (condition) {
-
-    } else {
-
+function switchNavButton(number) {
+    if ('1' == number){
+        document.getElementById('test1').classList.add('active');
+        document.getElementById('test2').classList.remove('active');
+        document.getElementById('test3').classList.remove('active');
+        document.getElementById('test4').classList.remove('active');
+        document.getElementById('test5').classList.remove('active');
+        document.getElementById('test6').classList.remove('active');
+        document.getElementById('test7').classList.remove('active');
+        document.getElementById('test8').classList.remove('active');
+        document.getElementById('test9').classList.remove('active');
     }
+
+    if ('2' == number){
+        document.getElementById('test1').classList.remove('active');
+        document.getElementById('test2').classList.add('active');
+        document.getElementById('test3').classList.remove('active');
+        document.getElementById('test4').classList.remove('active');
+        document.getElementById('test5').classList.remove('active');
+        document.getElementById('test6').classList.remove('active');
+        document.getElementById('test7').classList.remove('active');
+        document.getElementById('test8').classList.remove('active');
+        document.getElementById('test9').classList.remove('active');
+    }
+
+    if ('3' == number){
+        document.getElementById('test1').classList.remove('active');
+        document.getElementById('test2').classList.remove('active');
+        document.getElementById('test3').classList.add('active');
+        document.getElementById('test4').classList.remove('active');
+        document.getElementById('test5').classList.remove('active');
+        document.getElementById('test6').classList.remove('active');
+        document.getElementById('test7').classList.remove('active');
+        document.getElementById('test8').classList.remove('active');
+        document.getElementById('test9').classList.remove('active');
+    }
+
+    if ('4' == number){
+        document.getElementById('test1').classList.remove('active');
+        document.getElementById('test2').classList.remove('active');
+        document.getElementById('test3').classList.remove('active');
+        document.getElementById('test4').classList.add('active');
+        document.getElementById('test5').classList.remove('active');
+        document.getElementById('test6').classList.remove('active');
+        document.getElementById('test7').classList.remove('active');
+        document.getElementById('test8').classList.remove('active');
+        document.getElementById('test9').classList.remove('active');
+    }
+
+    if ('5' == number){
+        document.getElementById('test1').classList.remove('active');
+        document.getElementById('test2').classList.remove('active');
+        document.getElementById('test3').classList.remove('active');
+        document.getElementById('test4').classList.remove('active');
+        document.getElementById('test5').classList.add('active');
+        document.getElementById('test6').classList.remove('active');
+        document.getElementById('test7').classList.remove('active');
+        document.getElementById('test8').classList.remove('active');
+        document.getElementById('test9').classList.remove('active');
+    }
+
+    if ('6' == number){
+        document.getElementById('test1').classList.remove('active');
+        document.getElementById('test2').classList.remove('active');
+        document.getElementById('test3').classList.remove('active');
+        document.getElementById('test4').classList.remove('active');
+        document.getElementById('test5').classList.remove('active');
+        document.getElementById('test6').classList.add('active');
+        document.getElementById('test7').classList.remove('active');
+        document.getElementById('test8').classList.remove('active');
+        document.getElementById('test9').classList.remove('active');
+    }
+
+    if ('7' == number){
+        document.getElementById('test1').classList.remove('active');
+        document.getElementById('test2').classList.remove('active');
+        document.getElementById('test3').classList.remove('active');
+        document.getElementById('test4').classList.remove('active');
+        document.getElementById('test5').classList.remove('active');
+        document.getElementById('test6').classList.remove('active');
+        document.getElementById('test7').classList.add('active');
+        document.getElementById('test8').classList.remove('active');
+        document.getElementById('test9').classList.remove('active');
+    }
+
+    if ('8' == number){
+        document.getElementById('test1').classList.remove('active');
+        document.getElementById('test2').classList.remove('active');
+        document.getElementById('test3').classList.remove('active');
+        document.getElementById('test4').classList.remove('active');
+        document.getElementById('test5').classList.remove('active');
+        document.getElementById('test6').classList.remove('active');
+        document.getElementById('test7').classList.remove('active');
+        document.getElementById('test8').classList.add('active');
+        document.getElementById('test9').classList.remove('active');
+    }
+
+    if ('9' == number){
+        document.getElementById('test1').classList.remove('active');
+        document.getElementById('test2').classList.remove('active');
+        document.getElementById('test3').classList.remove('active');
+        document.getElementById('test4').classList.remove('active');
+        document.getElementById('test5').classList.remove('active');
+        document.getElementById('test6').classList.remove('active');
+        document.getElementById('test7').classList.remove('active');
+        document.getElementById('test8').classList.remove('active');
+        document.getElementById('test9').classList.add('active');
+    }
+
+    // let activeButton = document.getElementsByClassName('active');
+    // let disabledButton = document.getElementsByClassName('border-lft');
+    // if (condition) {
+
+    // } else {
+
+    // }
 
 
 

@@ -55,7 +55,7 @@ html {
 }
 
 .active {
-    border-left: 5px solid whitesmoke;
+    border-left-color:whitesmoke !important;
 }
 
 
