@@ -28,9 +28,9 @@ function show(section) {
 
 function switchNavButton(number) {
     for (let sectionNumber = 1; sectionNumber < 10; sectionNumber++) {
-        document.getElementById(`test${sectionNumber}`).classList.remove('active');
+        document.getElementById(`section${sectionNumber}`).classList.remove('active');
     }
-    document.getElementById(`test${number}`).classList.add('active');
+    document.getElementById(`section${number}`).classList.add('active');
 }
 
 function addTask() {
