@@ -1,0 +1,6 @@
+function creatHTMLshowPrivacy() {
+    return /*html*/ `
+    
+    
+    `;
+}

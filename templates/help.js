@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+function creatHTMLshowHelp() {
+    return /*html*/ `
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -92,3 +94,6 @@
 </body>
 
 </html>
+    
+    `;
+}
