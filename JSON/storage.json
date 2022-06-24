@@ -7,5 +7,32 @@
         "category" : "Test",
         "employees" : "Marco",
         "show":"board-ToDo"
+    },
+    {
+        "urgency":"1",
+        "date" : "23.06.2022",
+        "title" : "Probetitel in progress",
+        "discription" : "Dieser Text wurde aus ein Backend geladen ;P",
+        "category" : "Test",
+        "employees" : "Marco",
+        "show":"board-InProgress"
+    },
+    {
+        "urgency":"1",
+        "date" : "23.06.2022",
+        "title" : "Probetitel testing",
+        "discription" : "Dieser Text wurde aus ein Backend geladen ;P",
+        "category" : "Test",
+        "employees" : "Marco",
+        "show":"board-Testing"
+    },
+    {
+        "urgency":"1",
+        "date" : "23.06.2022",
+        "title" : "Probetitel done",
+        "discription" : "Dieser Text wurde aus ein Backend geladen ;P",
+        "category" : "Test",
+        "employees" : "Marco",
+        "show":"board-Done"
     }
 ]

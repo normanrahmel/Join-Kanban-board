@@ -12,18 +12,6 @@ function creatHTMLshowBoard() {
                 <h2>in progress</h2>
 
                 <div id="boardInProgressContent"></div>
-
-                <!-- <div class="board-notecard">
-                    <div class="board-notecard-date">Fertigstellung zum...</div>
-                    <h3 class="ft-bld">Titel</h3>
-                    <div class="board-notecard-discription">Beschreibung</div>
-                    <div class="board-notecard-bottom">
-                        <div>Category</div>
-                        <div>Bild</div>
-                    </div>
-
-                </div> -->
-
             </div>
 
             <div class="board-section">
@@ -42,6 +30,26 @@ function creatHTMLshowBoard() {
         </div>`
 
 
+}
+
+
+function creatHTMLsmallCard(task){
+    return /*html*/ `
+        <div class="board-notecard">
+            <div class="board-notecard-date">
+                ${task.date}</div>
+
+            <h3 class="ft-bld">${task.title}</h3>
+
+            <div class="board-notecard-discription">${task.discription}</div>
+
+            <div class="board-notecard-bottom">
+                <div>${task.category}</div>
+
+                <div>${task.employees}</div>
+            </div>
+
+        </div>`
 }
 
 

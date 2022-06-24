@@ -71,29 +71,19 @@ async function loadTasksJSON_API() {
 
 
 function fillBoard() {
-    console.log('Test');
-
     for (let numer = 0; numer < tasks.length; numer++) {
-        let task = tasks[numer];
+        if (tasks[numer].show == "board-ToDo") {
+            document.getElementById('boardToDoContent').innerHTML += 
+                creatHTMLsmallCard(tasks[numer]);}
+        if (tasks[numer].show == "board-InProgress") {
+            document.getElementById('boardInProgressContent').innerHTML += 
+                creatHTMLsmallCard(tasks[numer]);}
+        if (tasks[numer].show == "board-Testing") {
+            document.getElementById('boardTestingContent').innerHTML += 
+                creatHTMLsmallCard(tasks[numer]);}
+        if (tasks[numer].show == "board-Done") {
+            document.getElementById('boardToneContent').innerHTML += 
+                creatHTMLsmallCard(tasks[numer]);}
+}}
 
-        if (task.show == "board-ToDo") {
-            document.getElementById('boardToDoContent').innerHTML += /*html*/ `
-                <div class="board-notecard">
-                    <div class="board-notecard-date">
-                        ${task.date}</div>
 
-                    <h3 class="ft-bld">${task.title}</h3>
-
-                    <div class="board-notecard-discription">${task.discription}</div>
-
-                    <div class="board-notecard-bottom">
-                        <div>${task.category}</div>
-
-                        <div>${task.employees}</div>
-                    </div>
-
-                </div>`
-        }
-
-    }
-}
