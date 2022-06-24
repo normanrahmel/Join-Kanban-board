@@ -27,8 +27,33 @@ html {
 
 /* ----- Multifunctional Classes ----- */
 
+.flex{
+    display: flex;
+}
+
 .flex-col {
     flex-direction: column;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-70{
+    width: 70%;
+}
+
+.w-20{
+    width: 20%;
+}
+
+.w-10{
+    width: 10%;
 }
 
 .mrg-btm {
@@ -45,6 +70,11 @@ html {
 
 .txt-left {
     text-align: left;
+}
+
+.txt-center{
+    text-align: center;
+    
 }
 
 

@@ -51,7 +51,7 @@ function creatTaskJSON() {
     let urgency = document.getElementById('taskUrgency').value;
     let description = document.getElementById('taskDescription').value;
     let employees = document.getElementById('taskEmployees').value;
-    let show = "backlog"
+    let show = "backlog";
 
     return { urgency, date, title, description, category, employees, show };
 }
@@ -88,7 +88,7 @@ function fillBoard() {
 
 
 function fillBacklog(){
-    for (let number = 0; number < tasks.length; number++) {
+    for (let number = tasks.length-1; number > -1; number--) {
         const task = tasks[number];
         document.getElementById('backlogTable').innerHTML +=
             creatHTMLbacklogCard(task);

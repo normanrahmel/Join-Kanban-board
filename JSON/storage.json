@@ -1,7 +1,7 @@
 [
     {
         "urgency":"1",
-        "date" : "23.06.2022",
+        "date" : "2022-06-24",
         "title" : "Probetitel",
         "description" : "Dieser Text wurde aus ein Backend geladen ;P",
         "category" : "Test",
@@ -10,7 +10,7 @@
     },
     {
         "urgency":"1",
-        "date" : "23.06.2022",
+        "date" : "2022-06-24",
         "title" : "Probetitel in progress",
         "description" : "Dieser Text wurde aus ein Backend geladen ;P",
         "category" : "Test",
@@ -19,7 +19,7 @@
     },
     {
         "urgency":"1",
-        "date" : "23.06.2022",
+        "date" : "2022-06-24",
         "title" : "Probetitel testing",
         "description" : "Dieser Text wurde aus ein Backend geladen ;P",
         "category" : "Test",
@@ -28,7 +28,7 @@
     },
     {
         "urgency":"1",
-        "date" : "23.06.2022",
+        "date" : "2022-06-24",
         "title" : "Probetitel done",
         "description" : "Dieser Text wurde aus ein Backend geladen ;P",
         "category" : "Test",

@@ -55,58 +55,42 @@ function creatHTMLsmallCard(task) {
 
 function creatHTMLshowBacklog() {
     return /*html*/ `
-        <div class="backlog-right-side">
+        <div id="backlogTable" class="backlog-right-side">
             <div>
                 <h2>Backlog</h2>
             </div>
-
-            <div>
-
-                <!-- <div>discription</div>
-                <div>urgency</div>
-                <div>date</div> -->
+            <div class="flex-center">
+                <div class="backlog-header txt-center flex">
+                    <h3 class="w-20">Assigned to</h3>
+                    <h3 class="w-10">Category</h3>
+                    <h3 class="w-70">Details</h3>
+                </div>
             </div>
-            <table>
-                <tbody id="backlogTable">
-                    <tr>
-                        <th class="t-column-assigned-to">
-                            Assigned to
-                        </th>
-                        <th class="t-column-category">
-                            Category
-                        </th>
-                        <th class="t-column-details">
-                            Details
-                        </th>
-                    </tr>
-
-                    
-                </tbody>
-            </table>
         </div>`
 }
 
 
 function creatHTMLbacklogCard(task){
     return /*html*/`
-        <tr>
-            <td>
+    <div class="flex-center">
+        <div class="backlog-card txt-center flex w-100 mrg-btm "  style="background-color: lightgray;">
+            <div class="w-20">
                 ${task.employees}
-            </td>
-            <td>
+            </div>
+            <div  class="w-10">
                 ${task.category}
-            </td>
-            <td>
-                <h4>${task.title}</h3>
+            </div>
+            <div class="w-70">
+                <h4>${task.title}</h4>
                 <span>${task.description}</span>
-                <div>
-                    ${task.urgency}
-                    ${task.show}
-                    ${task.date}
+                <div class="backlog-card-description-bottom">
+                    <div>${task.urgency}</div> 
+                    <div>${task.show}</div> 
+                    <div>${task.date}</div> 
                 </div>
-                    
-            </td>
-        </tr>`
+            </div>
+        </div>
+    </div>`
 }
 
 

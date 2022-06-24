@@ -45,18 +45,23 @@
     width: calc(100vw - 180px);
 }
 
-.t-column-assigned-to{
-    width: 20%;
+.backlog-header{
+    width: 94%;
 }
 
-.t-column-category{
-    width: 10%;
+.backlog-card{
+    width: 94%;
+    border: 1px solid black;
+    border-radius: 20px;
+    align-items: center;
 }
 
-.t-column-details{
-    width: 70%;
+.backlog-card h4{
+    margin: 5px;
 }
 
-#backlogTable tr{
-    background-color: lightgray;
+.backlog-card-description-bottom{
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
 }
