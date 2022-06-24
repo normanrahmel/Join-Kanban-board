@@ -54,7 +54,7 @@ function creatTaskJSON() {
     let urgency = document.getElementById('taskUrgency').value;
     let description = document.getElementById('taskDescription').value;
     let employees = document.getElementById('taskEmployees').value;
-    let show = "backlog";
+    let show = "ToDo";
 
     return { urgency, date, title, description, category, employees, show };
 }
