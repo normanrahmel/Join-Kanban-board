@@ -1,0 +1,33 @@
+/*backlog*/
+
+
+.backlog-right-side{
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 180px);
+}
+
+.backlog-header{
+    width: 94%;
+}
+
+.backlog-card{
+    width: 94%;
+    border: 1px solid black;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.backlog-card h4{
+    margin: 5px;
+}
+
+.backlog-card-description-bottom{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.backlog-card-description-bottom div{
+    margin: 0 10px;
+}

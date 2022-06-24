@@ -1,6 +1,8 @@
 /* ----- Navigation Classes ----- */
 
 .left-side-cmpl {
+    position: fixed;
+    height: 100vh;
     width: 180px;
     background-color: #4A708B;
     align-items: start;

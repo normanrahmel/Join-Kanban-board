@@ -2,37 +2,46 @@
     {
         "urgency":"1",
         "date" : "2022-06-24",
-        "title" : "Probetitel",
-        "description" : "Dieser Text wurde aus ein Backend geladen ;P",
-        "category" : "Test",
+        "title" : "JS",
+        "description" : "Board Drag and Drop",
+        "category" : "Aufbau Website",
         "employees" : "Marco",
-        "show":"ToDo"
+        "show":"Done"
     },
     {
         "urgency":"1",
         "date" : "2022-06-24",
-        "title" : "Probetitel in progress",
-        "description" : "Dieser Text wurde aus ein Backend geladen ;P",
-        "category" : "Test",
-        "employees" : "Marco",
+        "title" : "CSS",
+        "description" : "Gestalltung Backlog",
+        "category" : "Aufbau Website",
+        "employees" : "Team",
         "show":"InProgress"
     },
     {
         "urgency":"1",
         "date" : "2022-06-24",
-        "title" : "Probetitel testing",
-        "description" : "Dieser Text wurde aus ein Backend geladen ;P",
-        "category" : "Test",
-        "employees" : "Marco",
+        "title" : "JS",
+        "description" : "Funktionalität Backlog",
+        "category" : "Aufbau Website",
+        "employees" : "Team",
         "show":"Testing"
     },
     {
         "urgency":"1",
         "date" : "2022-06-24",
-        "title" : "Probetitel done",
-        "description" : "Dieser Text wurde aus ein Backend geladen ;P",
-        "category" : "Test",
-        "employees" : "Marco",
-        "show":"Done"
+        "title" : "JS",
+        "description" : "Backend einfügen",
+        "category" : "Aufbau Website",
+        "employees" : "Team",
+        "show":"ToDo"
+    },
+    {
+        "urgency":"1",
+        "date" : "2022-06-24",
+        "title" : "CSS",
+        "description" : "Gestalltung Board",
+        "category" : "Aufbau Website",
+        "employees" : "Team",
+        "show":"ToDo"
     }
 ]

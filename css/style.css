@@ -120,3 +120,8 @@ html {
 
 /* ----- Bitte noch einsortieren ----- */
 
+.right-side-cmpl{
+    position: absolute;
+    top: 0;
+    left: 180px;
+}
