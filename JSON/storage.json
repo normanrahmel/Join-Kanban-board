@@ -51,6 +51,33 @@
         "description" : "Gestalltung Board",
         "category" : "Aufbau Website",
         "employees" : "Team",
+        "show":"InProgress"
+    },
+    {
+        "urgency":"1",
+        "date" : "2022-06-24",
+        "title" : "CSS",
+        "description" : "Gestalltung Add Task",
+        "category" : "Aufbau Website",
+        "employees" : "Team",
+        "show":"ToDo"
+    },
+    {
+        "urgency":"1",
+        "date" : "2022-06-24",
+        "title" : "All",
+        "description" : "Archive",
+        "category" : "Aufbau Website",
+        "employees" : "Team",
+        "show":"ToDo"
+    },
+    {
+        "urgency":"1",
+        "date" : "2022-06-24",
+        "title" : "All",
+        "description" : "Trash",
+        "category" : "Aufbau Website",
+        "employees" : "Team",
         "show":"ToDo"
     }
 ]
