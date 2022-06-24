@@ -103,7 +103,7 @@ function creatHTMLbacklogCard(task, number) {
                     <div class="task-status"
                          onclick="openStatusChange(${number})">
                         Status: 
-                            <div>${task.show}
+                            <div style="text-decoration: underline;">${task.show}
 
                                 <div id="status${number}"
                                     class="dropdown-content d-none">
