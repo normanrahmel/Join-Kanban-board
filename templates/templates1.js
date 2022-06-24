@@ -1,27 +1,39 @@
 function creatHTMLshowBoard() {
     return /*html*/ `
         <div class="board-right-side">
-            <div class="board-section">
+            <div class="board-section"
+                 ondrop="moveTo('ToDo')" 
+                 ondragover="allowDrop(event)">
+
                 <h2>to do</h2>
 
                 <div id="boardToDoContent"></div>
 
             </div>
 
-            <div class="board-section">
+            <div class="board-section"
+                 ondrop="moveTo('InProgress')" 
+                 ondragover="allowDrop(event)">
+
                 <h2>in progress</h2>
 
                 <div id="boardInProgressContent"></div>
             </div>
 
-            <div class="board-section">
+            <div class="board-section"
+                 ondrop="moveTo('Testing')" 
+                 ondragover="allowDrop(event)">
+
                 <h2>testing</h2>
 
                 <div id="boardTestingContent"></div>
 
             </div>
 
-            <div class="board-section">
+            <div class="board-section"
+                 ondrop="moveTo('Done')" 
+                 ondragover="allowDrop(event)">
+
                 <h2>done</h2>
 
                 <div id="boardToneContent"></div>
@@ -33,9 +45,12 @@ function creatHTMLshowBoard() {
 }
 
 
-function creatHTMLsmallCard(task) {
+function creatHTMLsmallCard(task, number) {
     return /*html*/ `
-        <div class="board-notecard">
+        <div class="board-notecard" 
+             draggable="true"
+             ondragstart="startDragging(${number})">
+
             <div class="board-notecard-date">
                 ${task.date}</div>
 
@@ -84,8 +99,8 @@ function creatHTMLbacklogCard(task){
                 <h4>${task.title}</h4>
                 <span>${task.description}</span>
                 <div class="backlog-card-description-bottom">
-                    <div>${task.urgency}</div> 
-                    <div>${task.show}</div> 
+                    <!-- <div>${task.urgency}</div>  -->
+                    <div>Status: ${task.show}</div> 
                     <div>${task.date}</div> 
                 </div>
             </div>
@@ -100,7 +115,7 @@ function creatHTMLshowAddTask() {
             Header
         </div>
 
-        <form class="form-example" onsubmit="addTask()"> 
+        <form class="form-example" action="" onsubmit="addTask(); show(creatHTMLshowAddTask())"> 
             <!-- action="" method="get" -->
 
             <div class="form-example">
@@ -134,9 +149,7 @@ function creatHTMLshowAddTask() {
             </div>
 
             <div class="form-example">
-              <input type="submit" value="Subscribe!">
+                <button type="submit">Submit</button>
             </div>
-
-          </form>
-        `
+          </form>`
 }

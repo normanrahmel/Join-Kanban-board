@@ -1,4 +1,7 @@
 let tasks = [];
+let tasksArchive = [];
+let tasksTrash = [];
+
 
 
 async function firstrender() {
@@ -10,7 +13,7 @@ async function firstrender() {
 
 
 async function loadTasks() {
-    let tasksJSONAsText = localStorage.getItem('tasksJSON');
+    let tasksJSONAsText = localStorage.getItem('tasksJSONactive');
 
     if (tasksJSONAsText) { //fängt Fehlermeldung ab, falls noch kein Array existiert
         tasks = JSON.parse(tasksJSONAsText);
@@ -60,7 +63,7 @@ function creatTaskJSON() {
 function saveTasks() {
     let tasksJSONAsText = JSON.stringify(tasks);
 
-    localStorage.setItem('tasksJSON', tasksJSONAsText);
+    localStorage.setItem('tasksJSONactive', tasksJSONAsText);
 }
 
 
@@ -72,18 +75,18 @@ async function loadTasksJSON_API() {
 
 function fillBoard() {
     for (let number = 0; number < tasks.length; number++) {
-        if (tasks[number].show == "board-ToDo") {
+        if (tasks[number].show == "ToDo") {
             document.getElementById('boardToDoContent').innerHTML += 
-                creatHTMLsmallCard(tasks[number]);}
-        if (tasks[number].show == "board-InProgress") {
+                creatHTMLsmallCard(tasks[number], number);}
+        if (tasks[number].show == "InProgress") {
             document.getElementById('boardInProgressContent').innerHTML += 
-                creatHTMLsmallCard(tasks[number]);}
-        if (tasks[number].show == "board-Testing") {
+                creatHTMLsmallCard(tasks[number], number);}
+        if (tasks[number].show == "Testing") {
             document.getElementById('boardTestingContent').innerHTML += 
-                creatHTMLsmallCard(tasks[number]);}
-        if (tasks[number].show == "board-Done") {
+                creatHTMLsmallCard(tasks[number], number);}
+        if (tasks[number].show == "Done") {
             document.getElementById('boardToneContent').innerHTML += 
-                creatHTMLsmallCard(tasks[number]);}
+                creatHTMLsmallCard(tasks[number], number);}
 }}
 
 
@@ -93,4 +96,23 @@ function fillBacklog(){
         document.getElementById('backlogTable').innerHTML +=
             creatHTMLbacklogCard(task);
     }
+}
+
+// Drag and Drop
+
+let currentDraggedElement;
+
+function startDragging(id){
+    currentDraggedElement = id;
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function moveTo(showArea){
+    tasks[currentDraggedElement]['show'] = showArea;
+    saveTasks();
+    show(creatHTMLshowBoard());
+    fillBoard();
 }

@@ -63,5 +63,9 @@
 .backlog-card-description-bottom{
     margin: 5px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.backlog-card-description-bottom div{
+    margin: 0 10px;
 }
