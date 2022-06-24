@@ -94,7 +94,7 @@ function fillBacklog(){
     for (let number = tasks.length-1; number > -1; number--) {
         const task = tasks[number];
         document.getElementById('backlogTable').innerHTML +=
-            creatHTMLbacklogCard(task);
+            creatHTMLbacklogCard(task, number);
     }
 }
 
@@ -115,4 +115,27 @@ function moveTo(showArea){
     saveTasks();
     show(creatHTMLshowBoard());
     fillBoard();
+}
+
+// backlog changing status
+let activeChangingStatusBar;
+
+function openStatusChange(number){
+    document.getElementById(`status${number}`).classList.remove('d-none');
+    document.getElementById(`overlay`).classList.remove('d-none');
+    activeChangingStatusBar = `status${number}`;
+    
+}
+
+function closeStatusChange(){
+    document.getElementById(activeChangingStatusBar).classList.add('d-none');
+    document.getElementById(`overlay`).classList.add('d-none');
+}
+
+function changingStatus(status, number){
+    tasks[number].show = status;
+    saveTasks();
+    closeStatusChange();
+    show(creatHTMLshowBacklog()); 
+    fillBacklog();
 }

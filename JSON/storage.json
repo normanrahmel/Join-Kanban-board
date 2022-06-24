@@ -3,6 +3,15 @@
         "urgency":"1",
         "date" : "2022-06-24",
         "title" : "JS",
+        "description" : "Backlog Status Changing",
+        "category" : "Aufbau Website",
+        "employees" : "Marco",
+        "show":"Done"
+    },
+    {
+        "urgency":"1",
+        "date" : "2022-06-24",
+        "title" : "JS",
         "description" : "Board Drag and Drop",
         "category" : "Aufbau Website",
         "employees" : "Marco",

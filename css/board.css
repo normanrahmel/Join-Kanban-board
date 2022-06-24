@@ -12,6 +12,8 @@
     height: 95vh;
     margin-top: 20px;
     background-color: rgb(247, 247, 247);
+    border-radius: 20px;
+    overflow-y: auto;
 }
 
 .board-section h2{
