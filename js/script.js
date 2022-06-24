@@ -71,19 +71,26 @@ async function loadTasksJSON_API() {
 
 
 function fillBoard() {
-    for (let numer = 0; numer < tasks.length; numer++) {
-        if (tasks[numer].show == "board-ToDo") {
+    for (let number = 0; number < tasks.length; number++) {
+        if (tasks[number].show == "board-ToDo") {
             document.getElementById('boardToDoContent').innerHTML += 
-                creatHTMLsmallCard(tasks[numer]);}
-        if (tasks[numer].show == "board-InProgress") {
+                creatHTMLsmallCard(tasks[number]);}
+        if (tasks[number].show == "board-InProgress") {
             document.getElementById('boardInProgressContent').innerHTML += 
-                creatHTMLsmallCard(tasks[numer]);}
-        if (tasks[numer].show == "board-Testing") {
+                creatHTMLsmallCard(tasks[number]);}
+        if (tasks[number].show == "board-Testing") {
             document.getElementById('boardTestingContent').innerHTML += 
-                creatHTMLsmallCard(tasks[numer]);}
-        if (tasks[numer].show == "board-Done") {
+                creatHTMLsmallCard(tasks[number]);}
+        if (tasks[number].show == "board-Done") {
             document.getElementById('boardToneContent').innerHTML += 
-                creatHTMLsmallCard(tasks[numer]);}
+                creatHTMLsmallCard(tasks[number]);}
 }}
 
 
+function fillBacklog(){
+    for (let number = 0; number < tasks.length; number++) {
+        const task = tasks[number];
+        document.getElementById('backlogTable').innerHTML +=
+            creatHTMLbacklogCard(task);
+    }
+}

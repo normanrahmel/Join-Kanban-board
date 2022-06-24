@@ -59,11 +59,7 @@ html {
 }
 
 
-/* ----- Bitte noch einsortieren ----- */
 
-.board-right-side {
-    width: calc(100vw - 180px);
-}
 
 
 /*Button*/
@@ -91,3 +87,6 @@ html {
     box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
     transition-duration: .1s;
 }
+
+/* ----- Bitte noch einsortieren ----- */
+

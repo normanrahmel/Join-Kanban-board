@@ -33,7 +33,7 @@ function creatHTMLshowBoard() {
 }
 
 
-function creatHTMLsmallCard(task){
+function creatHTMLsmallCard(task) {
     return /*html*/ `
         <div class="board-notecard">
             <div class="board-notecard-date">
@@ -41,7 +41,7 @@ function creatHTMLsmallCard(task){
 
             <h3 class="ft-bld">${task.title}</h3>
 
-            <div class="board-notecard-discription">${task.discription}</div>
+            <div class="board-notecard-description">${task.description}</div>
 
             <div class="board-notecard-bottom">
                 <div>${task.category}</div>
@@ -55,18 +55,58 @@ function creatHTMLsmallCard(task){
 
 function creatHTMLshowBacklog() {
     return /*html*/ `
-        <div>
-            Header
-        </div>
+        <div class="backlog-right-side">
+            <div>
+                <h2>Backlog</h2>
+            </div>
 
-        <div>
-            <div>Employees</div>
-            <div>Category</div>
-            <div>title</div>
-            <div>discription</div>
-            <div>urgency</div>
-            <div>date</div>
+            <div>
+
+                <!-- <div>discription</div>
+                <div>urgency</div>
+                <div>date</div> -->
+            </div>
+            <table>
+                <tbody id="backlogTable">
+                    <tr>
+                        <th class="t-column-assigned-to">
+                            Assigned to
+                        </th>
+                        <th class="t-column-category">
+                            Category
+                        </th>
+                        <th class="t-column-details">
+                            Details
+                        </th>
+                    </tr>
+
+                    
+                </tbody>
+            </table>
         </div>`
+}
+
+
+function creatHTMLbacklogCard(task){
+    return /*html*/`
+        <tr>
+            <td>
+                ${task.employees}
+            </td>
+            <td>
+                ${task.category}
+            </td>
+            <td>
+                <h4>${task.title}</h3>
+                <span>${task.description}</span>
+                <div>
+                    ${task.urgency}
+                    ${task.show}
+                    ${task.date}
+                </div>
+                    
+            </td>
+        </tr>`
 }
 
 
@@ -76,7 +116,7 @@ function creatHTMLshowAddTask() {
             Header
         </div>
 
-        <form class="form-example" onsubmit="addNote()"> 
+        <form class="form-example" onsubmit="addTask()"> 
             <!-- action="" method="get" -->
 
             <div class="form-example">
