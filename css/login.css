@@ -1,3 +1,7 @@
+.log-switch {
+    display: none;
+}
+
 .login-screen {
     display: flex;
     align-items: center;

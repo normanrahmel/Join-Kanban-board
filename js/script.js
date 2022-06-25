@@ -34,18 +34,28 @@ async function loadTasks() {
     }
 }
 
+/**
+ * Fetches Data from API
+ * @returns responseJSON
+ */
 async function loadTasksJSON_API() {
     let responseAsText = await fetch('./JSON/storage.json');
     return responseJSON = await responseAsText.json();
 }
 
-
+/**
+ * Show / Rendering the complete Right Section
+ * @param {var} section 
+ */
 function show(section) {
     document.getElementById('rightSideComplete').innerHTML = section;
 
 }
 
-
+/**
+ * Shows the Navigation Button of Current Page
+ * @param {var} number 
+ */
 function switchNavButton(number) {
     for (let sectionNumber = 1; sectionNumber < 10; sectionNumber++) {
         document.getElementById(`section${sectionNumber}`).classList.remove('active');
@@ -53,17 +63,20 @@ function switchNavButton(number) {
     document.getElementById(`section${number}`).classList.add('active');
 }
 
+/**
+ * Adding new Tasks and push to JSON
+ */
 function addTask() {
-
     let newTaskASJSON = creatTaskJSON();
-
     console.log(newTaskASJSON);
-
     tasks.push(newTaskASJSON);
     saveTasks();
 }
 
-
+/**
+ * Pushes all Values from created Tasks into JSON
+ * @returns all relevant data for the JSON. The individual Arrays in JSON
+ */
 function creatTaskJSON() {
     let title = document.getElementById('taskTitle').value;
     let date = document.getElementById('taskDate').value;
@@ -76,14 +89,18 @@ function creatTaskJSON() {
     return { urgency, date, title, description, category, employees, show };
 }
 
-
+/**
+ * Save the Tasks to Storage
+ * MOMENTAN NOCH LOCAL STATT BACKEND! --- TODO
+ */
 function saveTasks() {
     let tasksJSONAsText = JSON.stringify(tasks);
-
     localStorage.setItem('tasksJSONactive', tasksJSONAsText);
 }
 
-
+/**
+ * Places Data von the Board to the correct Sections
+ */
 function fillBoard() {
     for (let number = 0; number < tasks.length; number++) {
         if (tasks[number].show == "ToDo") {
@@ -100,7 +117,9 @@ function fillBoard() {
                 creatHTMLsmallCard(tasks[number], number);}
 }}
 
-
+/**
+ * Shows Tasks in Backlog as new created like a Historyboard
+ */
 function fillBacklog(){
     for (let number = tasks.length-1; number > -1; number--) {
         const task = tasks[number];
@@ -109,7 +128,7 @@ function fillBacklog(){
     }
 }
 
-// Drag and Drop
+// ----- Drag and Drop -----
 
 let currentDraggedElement;
 
@@ -128,7 +147,7 @@ function moveTo(showArea){
     fillBoard();
 }
 
-// backlog changing status
+// ----- backlog changing status -----
 let activeChangingStatusBar;
 
 function openStatusChange(number){
