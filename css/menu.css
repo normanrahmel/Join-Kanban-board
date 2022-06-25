@@ -1,11 +1,15 @@
 /* ----- Navigation Classes ----- */
 
 .left-side-cmpl {
-    position: fixed;
-    height: 100vh;
+    min-height: 100vh;
     width: 180px;
     background-color: rgba(41, 49, 51, 1);
     align-items: start;
+}
+
+.nav-sticky {
+    position: sticky;
+    top: 0;
 }
 
 .nav-logo {
@@ -31,7 +35,7 @@
     color: whitesmoke;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: #ff8800;
     transition: all 0.5s ease-in-out;
 }
@@ -40,5 +44,3 @@
     width: 100%;
     padding: 1rem 0;
 }
-
-

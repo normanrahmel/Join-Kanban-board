@@ -2,8 +2,8 @@ body {
     font-family: 'PT Sans', sans-serif;
     display: flex;
     margin: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -27,11 +27,11 @@ html {
 
 /* ----- Multifunctional Classes ----- */
 
-.d-none{
+.d-none {
     display: none !important;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
@@ -39,46 +39,49 @@ html {
     flex-direction: column;
 }
 
-.flex-center{
+.flex-center {
     display: flex;
-    justify-content: center;
-}
-
-.w-100{
     width: 100%;
 }
 
-.w-70{
+.w-100 {
+    width: 100%;
+}
+
+.w-70 {
     width: 70%;
 }
 
-.w-20{
+.w-20 {
     width: 20%;
 }
 
-.w-10{
+.w-10 {
     width: 10%;
 }
 
+.w-5 {
+    padding-left: 5px;
+}
+
 .mrg-btm {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .mrg-rgt {
-    margin-right: 16px;
+    margin-right: 1rem;
 }
 
 .mrg-lft {
-    margin-left: 16px;
+    margin-left: 1rem;
 }
 
 .txt-left {
     text-align: left;
 }
 
-.txt-center{
+.txt-center {
     text-align: center;
-    
 }
 
 
@@ -89,12 +92,9 @@ html {
 }
 
 .active {
-    border-left-color:#ff8800 !important;
+    border-left-color: #ff8800 !important;
     transition: all 0.5s ease-in-out;
 }
-
-
-
 
 
 /*Button*/
@@ -123,15 +123,15 @@ html {
     transition-duration: .1s;
 }
 
+
 /* ----- Bitte noch einsortieren ----- */
 
-.right-side-cmpl{
-    position: absolute;
+.right-side-cmpl {
     top: 0;
     left: 180px;
 }
 
-#overlay{
+#overlay {
     z-index: 1;
     height: 100vh;
     width: 100vw;

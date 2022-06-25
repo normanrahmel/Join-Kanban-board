@@ -70,15 +70,17 @@ function creatHTMLsmallCard(task, number) {
 
 function creatHTMLshowBacklog() {
     return /*html*/ `
-        <div id="backlogTable" class="backlog-right-side">
+        <div id="backlogTable" class="backlog-right-side mrg-lft mrg-rgt">
             <div>
                 <h2>Backlog</h2>
             </div>
             <div class="flex-center">
                 <div class="backlog-header txt-center flex">
-                    <h3 class="w-20">Assigned to</h3>
-                    <h3 class="w-10">Category</h3>
-                    <h3 class="w-70">Details</h3>
+                    <div >Assigned to</div>
+                    <div >Datum</div>
+                    <div>Category</div>
+                    <div >Status</div>
+                    <div >Details</div>
                 </div>
             </div>
         </div>`
@@ -86,8 +88,8 @@ function creatHTMLshowBacklog() {
 
 
 function creatHTMLbacklogCard(task, number) {
-    return /*html*/`
-    <div class="flex-center">
+    return /*html*/ `
+    <div class="flex-center ">
         <div class="backlog-card txt-center flex w-100 mrg-btm ">
             <div class="w-20">
                 ${task.employees}

@@ -1,63 +1,62 @@
 /*backlog*/
 
-
-.backlog-right-side{
+.backlog-right-side {
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 180px);
+    max-width: 100%;
 }
 
-.backlog-header{
-    width: 94%;
+.backlog-header {
+    justify-content: space-between;
+    width: 100%;
 }
 
-.backlog-card{
-    width: 94%;
+.backlog-card {
+    width: 100%;
     background-color: rgb(247, 247, 247);
     border: 1px solid lightgray;
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     align-items: center;
+    flex-direction: row;
 }
 
-.backlog-card h4{
+.backlog-card h4 {
     margin: 5px;
 }
 
-.backlog-card-description-bottom{
+.backlog-card-description-bottom {
     margin: 5px;
     display: flex;
     justify-content: center;
 }
 
-.backlog-card-description-bottom div{
+.backlog-card-description-bottom div {
     margin: 0 10px;
 }
 
 
 /*changing-status*/
 
-.task-status{
+.task-status {
     position: relative;
     display: flex;
 }
 
-.task-status:hover{
+.task-status:hover {
     cursor: pointer;
 }
 
-.dropdown-content{
+.dropdown-content {
     display: block;
     position: absolute;
-    
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
 
-
-.dropdown-content div{
+.dropdown-content div {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
