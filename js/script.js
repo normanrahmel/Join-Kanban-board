@@ -2,13 +2,18 @@ let tasks = [];
 let tasksArchive = [];
 let tasksTrash = [];
 
+/**
+ * deactivates LoginScreen and shows the Board
+ */
 function initFirstrender() {
     document.getElementById('loginScreen').classList.add('d-none');
     document.getElementById('rightSideComplete').classList.remove('d-none');
     document.getElementById('leftSideComplete').classList.remove('d-none');
-
 }
 
+/**
+ * Inits the Board and Renders the Tasks and Templates
+ */
 async function firstrender() {
     // alert('Hi meine großartigen Teamkollegen');
     await loadTasks();
@@ -16,7 +21,9 @@ async function firstrender() {
     fillBoard();
 }
 
-
+/**
+ * Checks for Items in Array else fetching Data from API
+ */
 async function loadTasks() {
     let tasksJSONAsText = localStorage.getItem('tasksJSONactive');
 
@@ -25,6 +32,11 @@ async function loadTasks() {
     } else { // beim ersten Start wird ein Beispiel aus der JSON geladen 
         tasks = await loadTasksJSON_API();
     }
+}
+
+async function loadTasksJSON_API() {
+    let responseAsText = await fetch('./JSON/storage.json');
+    return responseJSON = await responseAsText.json();
 }
 
 
@@ -69,12 +81,6 @@ function saveTasks() {
     let tasksJSONAsText = JSON.stringify(tasks);
 
     localStorage.setItem('tasksJSONactive', tasksJSONAsText);
-}
-
-
-async function loadTasksJSON_API() {
-    let responseAsText = await fetch('./JSON/storage.json');
-    return responseJSON = await responseAsText.json();
 }
 
 
