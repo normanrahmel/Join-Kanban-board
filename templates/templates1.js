@@ -135,43 +135,41 @@ function creatHTMLshowAddTask() {
         </div>
     <div class="task-background">
 
-
-        <form class="form-example" action="" onsubmit="addTask(); show(creatHTMLshowAddTask())">
+        <form class="task-form" action="" onsubmit="addTask(); show(creatHTMLshowAddTask())">
             <!-- action="" method="get" -->
 
-            <div class="form-example">
+            <div class="form-field">
                 <label for="taskTitle">Title: </label>
-                <input class="task-input" type="text" id="taskTitle" placeholder="Title..." required>
+                <input class="task-input" type="text" id="taskTitle" placeholder="Title..." style="width: 250px" required>
             </div>
 
-            <div class="form-example">
+            <div class="form-field">
                 <label for="taskDate">Due Date: </label>
-                <input class="task-input" type="date" id="taskDate" required>
+                <input class="task-input" type="date" id="taskDate" style="width: 130px" required>
             </div>
 
-            <div class="form-example">
+            <div class="form-field">
                 <label for="taskCategory">Category: </label>
-                <input class="task-input" type="text" id="taskCategory" placeholder="Category..." required>
+                <input class="task-input" type="text" id="taskCategory" placeholder="Category..." style="width: 250px" required>
             </div>
 
-            <div class="form-example">
+            <div class="form-field">
                 <label for="taskUrgency">Urgency: </label>
-                <input class="task-input" type="number" min="1" max="3" size="3" id="taskUrgency" required>
+                <input class="task-input" type="number" min="1" max="3" size="3" id="taskUrgency" style="width: 40px" required>
             </div>
 
-            <div class="form-example">
+            <div class="form-field">
                 <label for="taskDescription">Description: </label>
-                <textarea class="task-input" type="text" id="taskDescription" rows="5" columns="4" placeholder="..." required>
+                <textarea class="task-input" type="text" id="taskDescription" placeholder="Description..." style="width: 250px; height: 100px" required>
             </div>
 
-            <div class="form-example">
+            <div class="form-field">
                 <label for="taskEmployees">User: </label>
                 <input class="task-input" type="text" id="taskEmployees" placeholder="add User..." required>
             </div>
 
-            <div class="form-example">
-                <button type="submit">Submit</button>
-            </div>
+            <button type="submit">Submit</button>
+
         </form>
     </div>
 </div>`
