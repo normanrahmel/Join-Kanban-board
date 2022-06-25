@@ -129,45 +129,50 @@ function creatHTMLbacklogCard(task, number) {
 
 function creatHTMLshowAddTask() {
     return /*html*/ `
-        <div>
-            Header
+    <div class="task-section">
+        <div class="task-header ft-bld">
+            Add Task
         </div>
+    <div class="task-background">
 
-        <form class="form-example" action="" onsubmit="addTask(); show(creatHTMLshowAddTask())"> 
+
+        <form class="form-example" action="" onsubmit="addTask(); show(creatHTMLshowAddTask())">
             <!-- action="" method="get" -->
 
             <div class="form-example">
-              <label for="taskTitle">Title: </label>
-              <input type="text" id="taskTitle" placeholder="..." required>
+                <label for="taskTitle">Title: </label>
+                <input class="task-input" type="text" id="taskTitle" placeholder="Title..." required>
             </div>
 
             <div class="form-example">
-              <label for="taskDate">Due Date: </label>
-              <input type="date" id="taskDate" placeholder="..." required>
+                <label for="taskDate">Due Date: </label>
+                <input class="task-input" type="date" id="taskDate" required>
             </div>
 
             <div class="form-example">
                 <label for="taskCategory">Category: </label>
-                <input type="text" id="taskCategory" placeholder="..." required>
+                <input class="task-input" type="text" id="taskCategory" placeholder="Category..." required>
             </div>
-            
+
             <div class="form-example">
                 <label for="taskUrgency">Urgency: </label>
-                <input type="number" min="1" max="3" id="taskUrgency" placeholder="1-3" required>
+                <input class="task-input" type="number" min="1" max="3" size="3" id="taskUrgency" required>
             </div>
 
             <div class="form-example">
                 <label for="taskDescription">Description: </label>
-                <input type="text" id="taskDescription" placeholder="..." required>
+                <textarea class="task-input" type="text" id="taskDescription" rows="5" columns="4" placeholder="..." required>
             </div>
 
             <div class="form-example">
-                <label for="taskEmployees">Employees: </label>
-                <input type="text" id="taskEmployees" placeholder="..." required>
+                <label for="taskEmployees">User: </label>
+                <input class="task-input" type="text" id="taskEmployees" placeholder="add User..." required>
             </div>
 
             <div class="form-example">
                 <button type="submit">Submit</button>
             </div>
-          </form>`
+        </form>
+    </div>
+</div>`
 }
