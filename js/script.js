@@ -5,12 +5,12 @@ let tasksTrash = [];
 /**
  * deactivates LoginScreen and shows the Board
  */
+/*
 function initFirstrender() {
     document.getElementById('loginScreen').classList.add('d-none');
     document.getElementById('rightSideComplete').classList.remove('d-none');
     document.getElementById('leftSideComplete').classList.remove('d-none');
-}
-
+}*/
 /**
  * Inits the Board and Renders the Tasks and Templates
  */

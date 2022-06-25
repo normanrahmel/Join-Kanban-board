@@ -4,7 +4,7 @@
     position: fixed;
     height: 100vh;
     width: 180px;
-    background-color: #4A708B;
+    background-color: rgba(41, 49, 51, 1);
     align-items: start;
 }
 
@@ -29,6 +29,11 @@
     padding: 0.5rem 0rem 0.5rem 3rem;
     text-decoration: none;
     color: whitesmoke;
+}
+
+.nav-link:hover{
+    color: #ff8800;
+    transition: all 0.5s ease-in-out;
 }
 
 .nav-menu {
