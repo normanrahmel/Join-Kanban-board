@@ -90,7 +90,8 @@ function creatHTMLshowBacklog() {
 function creatHTMLbacklogCard(task, number) {
     return /*html*/ `
     <div class="flex-center ">
-        <div class="backlog-card txt-center flex w-100 mrg-btm ">
+        <!--backlog-card txt-center flex w-100 mrg-btm-->
+        <div class="backlog-card flex mrg-btm">
             <div class="w-20">
                 ${task.employees}
             </div>

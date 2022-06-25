@@ -126,11 +126,6 @@ html {
 
 /* ----- Bitte noch einsortieren ----- */
 
-.right-side-cmpl {
-    top: 0;
-    left: 180px;
-}
-
 #overlay {
     z-index: 1;
     height: 100vh;
