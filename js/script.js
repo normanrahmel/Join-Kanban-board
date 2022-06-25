@@ -2,7 +2,12 @@ let tasks = [];
 let tasksArchive = [];
 let tasksTrash = [];
 
+function initFirstrender() {
+    document.getElementById('loginScreen').classList.add('d-none');
+    document.getElementById('rightSideComplete').classList.remove('d-none');
+    document.getElementById('leftSideComplete').classList.remove('d-none');
 
+}
 
 async function firstrender() {
     // alert('Hi meine großartigen Teamkollegen');

@@ -8,6 +8,7 @@
     <link rel="icon" href="./img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/backlog.css">
@@ -23,7 +24,27 @@
 </head>
 
 <body onload="firstrender()">
-    <div class="left-side-cmpl flex-col ft-reg">
+    <div id="loginScreen" class="login-screen">
+        <div class="login">
+            <form class="login-form">
+                <!--action="/action_page.php" MUSS VERKNÜPFT WERDEN-->
+                <div class="login-field">
+                    <label class="llabel" for="fname">Login Name:</label>
+                    <input class="linput" type="text" id="lname" name="lname" placeholder="enter Name"><br><br>
+                </div>
+                <div class="login-field">
+                    <label class="llabel" for="lname">Password:</label>
+                    <input class="linput" type="password" id="pw" name="lpw"
+                        placeholder="enter Password"><br><br>
+                </div>
+                <div class="login-button">
+                    <input class="lsubmit" type="submit" value="Login" onclick="initFirstrender()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="leftSideComplete" class="left-side-cmpl flex-col ft-reg d-none">
         <div class="nav-logo">
             <img src="img/newLogo.png" class="main-logo">
         </div>
@@ -41,14 +62,10 @@
                 <hr style="width:90px; margin:1rem 2.5rem">
                 <a onclick="show(creatHTMLshowLogout());switchNavButton('9')" href="#" id="section9" class="nav-link border-lft">Logout</a>
             </div>
-
-
         </div>
     </div>
-    <div class="right-side-cmpl" id="rightSideComplete">
-
+    <div class="right-side-cmpl d-none" id="rightSideComplete">
     </div>
-
     <div id="overlay" class="d-none" onclick="closeStatusChange()">.</div>
 </body>
 
