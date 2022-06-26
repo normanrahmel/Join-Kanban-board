@@ -5,12 +5,19 @@ let tasksTrash = [];
 /**
  * deactivates LoginScreen and shows the Board
  */
-/*
 function initFirstrender() {
     document.getElementById('loginScreen').classList.add('d-none');
     document.getElementById('rightSideComplete').classList.remove('d-none');
     document.getElementById('leftSideComplete').classList.remove('d-none');
-}*/
+
+    // eliminates the Loop on submit button
+    var form = document.getElementById("sectionForm");
+
+    function handleForm(event) { event.preventDefault(); }
+    form.addEventListener('submit', handleForm);
+}
+
+
 /**
  * Inits the Board and Renders the Tasks and Templates
  */
@@ -104,24 +111,29 @@ function saveTasks() {
 function fillBoard() {
     for (let number = 0; number < tasks.length; number++) {
         if (tasks[number].show == "ToDo") {
-            document.getElementById('boardToDoContent').innerHTML += 
-                creatHTMLsmallCard(tasks[number], number);}
+            document.getElementById('boardToDoContent').innerHTML +=
+                creatHTMLsmallCard(tasks[number], number);
+        }
         if (tasks[number].show == "InProgress") {
-            document.getElementById('boardInProgressContent').innerHTML += 
-                creatHTMLsmallCard(tasks[number], number);}
+            document.getElementById('boardInProgressContent').innerHTML +=
+                creatHTMLsmallCard(tasks[number], number);
+        }
         if (tasks[number].show == "Testing") {
-            document.getElementById('boardTestingContent').innerHTML += 
-                creatHTMLsmallCard(tasks[number], number);}
+            document.getElementById('boardTestingContent').innerHTML +=
+                creatHTMLsmallCard(tasks[number], number);
+        }
         if (tasks[number].show == "Done") {
-            document.getElementById('boardToneContent').innerHTML += 
-                creatHTMLsmallCard(tasks[number], number);}
-}}
+            document.getElementById('boardToneContent').innerHTML +=
+                creatHTMLsmallCard(tasks[number], number);
+        }
+    }
+}
 
 /**
  * Shows Tasks in Backlog as new created like a Historyboard
  */
-function fillBacklog(){
-    for (let number = tasks.length-1; number > -1; number--) {
+function fillBacklog() {
+    for (let number = tasks.length - 1; number > -1; number--) {
         const task = tasks[number];
         document.getElementById('backlogTable').innerHTML +=
             creatHTMLbacklogCard(task, number);
@@ -132,7 +144,7 @@ function fillBacklog(){
 
 let currentDraggedElement;
 
-function startDragging(id){
+function startDragging(id) {
     currentDraggedElement = id;
 }
 
@@ -140,7 +152,7 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-function moveTo(showArea){
+function moveTo(showArea) {
     tasks[currentDraggedElement]['show'] = showArea;
     saveTasks();
     show(creatHTMLshowBoard());
@@ -150,22 +162,22 @@ function moveTo(showArea){
 // ----- backlog changing status -----
 let activeChangingStatusBar;
 
-function openStatusChange(number){
+function openStatusChange(number) {
     document.getElementById(`status${number}`).classList.remove('d-none');
     document.getElementById(`overlay`).classList.remove('d-none');
     activeChangingStatusBar = `status${number}`;
-    
+
 }
 
-function closeStatusChange(){
+function closeStatusChange() {
     document.getElementById(activeChangingStatusBar).classList.add('d-none');
     document.getElementById(`overlay`).classList.add('d-none');
 }
 
-function changingStatus(status, number){
+function changingStatus(status, number) {
     tasks[number].show = status;
     saveTasks();
     closeStatusChange();
-    show(creatHTMLshowBacklog()); 
+    show(creatHTMLshowBacklog());
     fillBacklog();
 }

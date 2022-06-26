@@ -27,19 +27,18 @@
 </head>
 
 <body onload="firstrender()">
-    <!--
+    <!--Login-Section-->
     <div id="loginScreen" class="login-screen">
         <div class="login">
-            <form class="login-form">
-                
+            <form class="login-form" id="sectionForm">
+
                 <div class="login-field">
                     <label class="llabel" for="fname">Login Name:</label>
                     <input class="linput" type="text" id="lname" name="lname" placeholder="enter Name"><br><br>
                 </div>
                 <div class="login-field">
                     <label class="llabel" for="lname">Password:</label>
-                    <input class="linput" type="password" id="pw" name="lpw"
-                        placeholder="enter Password"><br><br>
+                    <input class="linput" type="password" id="pw" name="lpw" placeholder="enter Password"><br><br>
                 </div>
                 <div class="login-button">
                     <input class="lsubmit" type="submit" value="Login" onclick="initFirstrender()">
@@ -47,8 +46,8 @@
             </form>
         </div>
     </div>
--->
-    <div id="leftSideComplete" class="left-side-cmpl flex-col ft-reg">
+
+    <div id="leftSideComplete" class="left-side-cmpl d-none flex-col ft-reg">
         <div class="nav-sticky flex-col">
             <div class="nav-logo">
                 <img src="img/newLogo.png" class="main-logo">
@@ -73,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="right-side-cmpl" id="rightSideComplete">
+    <div class="right-side-cmpl d-none" id="rightSideComplete">
     </div>
     <div id="overlay" class="d-none" onclick="closeStatusChange()">.</div>
 </body>
