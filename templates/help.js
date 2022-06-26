@@ -1,26 +1,8 @@
 function creatHTMLshowHelp() {
     return /*html*/ `
-    <!--Die Bilder dienen als Platzhalter-->
-<!DOCTYPE html>
-    <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="./js/include_html.js"></script>
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/help.css">
-
-    <title>Help</title>
-    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
-</head>
-
+<html lang="en">
 <body>
-
-    <div class="mrg-lft">
+    <div class="mrg-lft mrg-rgt mrg-btn section-help">
         <div>
             <h1>Help</h1>
             <p class="help-text">Join is a Kanban board. <br> It gives you an overview of your current work situation and helps visualising the project flow in agile project management. </p>
@@ -42,12 +24,11 @@ function creatHTMLshowHelp() {
                 <ul class="help-text">
                     <li>On the board each task passes through 4 stages.</li>
                     <li>The tasks can simply be moved by drag and drop.</li>
-                    <li>On touch-screens, clicking on the swipe icon <img src="./img/swipe.png" class="trashbin"> moves the task to the next status. <br> From "DONE" it will be moved to "TODO" again in order to allow all possible status changes.</li>
                     <li>After a task has been completed, it can either be archived or deleted.</li>
                     <li>The color of the left border of each task illustrates its importance level.</li>
                     <li>By clicking on the task you can see and edit all details.</li>
                 </ul>
-                <img class="help-img" src="img/Backlog.PNG" alt="Board" title="Board">
+                <img class="help-img" src="img/board_about.png" alt="Board" title="Board">
             </div>
             <div class="help-sections">
                 <h4><b>The backlog</b></h4>
@@ -56,7 +37,7 @@ function creatHTMLshowHelp() {
                     <li>You can edit the task by clicking on it.</li>
                     <li>To move the task to the board click on the arrow icon.</li>
                 </ul>
-                <img class="help-img" src="img/Backlog.PNG" alt="Backlog" title="Backlog">
+                <img class="help-img" src="img/backlog-help.png" alt="Backlog" title="Backlog">
             </div>
             <div class="help-sections">
                 <h4><b>The archive</b></h4>
@@ -78,21 +59,9 @@ function creatHTMLshowHelp() {
                 </ul>
                 <img class="help-img" src="img/Backlog.PNG" alt="Trash" title="Trash">
             </div>
-            <div class="help-sections">
-                <h4><b>The Settings</b></h4>
-                <ul class="help-text">
-                    <li>Each task can be assigned to a limited number of team members.</li>
-                    <li>We recommend to restrict this number to 1 or 2, in order to facilitate a clear structure of tasks and responsibilities. <br> Consider splitting tasks that seem to require more contributors. </li>
-                </ul>
-                <img class="help-img" src="img/Backlog.PNG" alt="Settings" title="Settings">
-            </div>
-
-
         </div>
     </div>
 </body>
-
 </html>
-    
     `;
 }
