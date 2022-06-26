@@ -151,7 +151,7 @@ function creatHTMLshowAddTask() {
 
             <div class="form-field">
                 <label for="taskDescription">Description: </label>
-                <textarea class="task-input" type="text" id="taskDescription" placeholder="Description..." style="width: 250px; height: 100px" required>
+                <textarea class="task-input" type="text" id="taskDescription" placeholder="Description..." style="width: 250px; height: 100px" required></textarea>
             </div>
 
             <div class="form-field">
