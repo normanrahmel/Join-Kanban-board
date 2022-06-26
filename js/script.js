@@ -182,4 +182,8 @@ function changingStatus(status, number) {
     fillBacklog();
 }
 
+
 // -------Section Trash-------
+function changeTrashPicture() {
+    document.getElementById('trash-button').src = 'img/trash-or.png';
+}

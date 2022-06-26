@@ -56,8 +56,6 @@ function creatHTMLsmallCard(task, number) {
     <div>${task.employees}</div>
 </div>
 
-
-
 <div class="board-notecard-description">
     <div class="section-title">
         ${task.title}
@@ -68,10 +66,10 @@ function creatHTMLsmallCard(task, number) {
     <div class="board-notecard-bottom">
         
         <div class="notecard-Button flex">
-            <div onclick="cardArchive()">
+            <div id="archive-button" onclick="cardArchive()">
                 <img style="width:1.5rem; height: 1.5rem" src="img/archive.png" alt="">
             </div>
-            <div onclick="cardTrash()">
+            <div id="trash-button" onclick="cardTrash(); changeTrashPicture()">
                 <img style="width:1.5rem; height: 1.5rem" src="img/trash.png" alt="">
             </div>
         </div>
