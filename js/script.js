@@ -181,3 +181,5 @@ function changingStatus(status, number) {
     show(creatHTMLshowBacklog());
     fillBacklog();
 }
+
+// -------Section Trash-------

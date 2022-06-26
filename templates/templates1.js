@@ -27,7 +27,7 @@ function creatHTMLshowBoard() {
                 <h2>testing</h2>
 
                 <div id="boardTestingContent"></div>
-
+            <!--Bitte Bezeichnung ändern und klassen Vernüftig benennen-->
             </div>
 
             <div class="board-section"
@@ -47,24 +47,37 @@ function creatHTMLshowBoard() {
 
 function creatHTMLsmallCard(task, number) {
     return /*html*/ `
-        <div class="board-notecard" 
-             draggable="true"
-             ondragstart="startDragging(${number})">
+       <div class="board-notecard" draggable="true" ondragstart="startDragging(${number})">
 
-            <div class="board-notecard-date">
-                ${task.date}</div>
+<div class="board-notecard-date">
+    <div> ${task.date}</div>
+    <div>${task.category}</div>
 
-            <h3 class="ft-bld">${task.title}</h3>
+    <div>${task.employees}</div>
+</div>
 
-            <div class="board-notecard-description">${task.description}</div>
 
-            <div class="board-notecard-bottom">
-                <div>${task.category}</div>
 
-                <div>${task.employees}</div>
+<div class="board-notecard-description">
+    <div>
+        <h4 class="ft-bld">${task.title}</h4>
+    </div>
+    <div>
+        <h5>${task.description}</h5>
+    </div>
+    <div class="board-notecard-bottom">
+        
+        <div class="notecard-Button flex">
+            <div>
+                <img style="width:1.5rem; height: 1.5rem" src="img/archive.png" alt="">
             </div>
+            <div>
+                <img style="width:1.5rem; height: 1.5rem" src="img/trash.png" alt="">
+            </div>
+        </div>
+    </div>
 
-        </div>`
+</div>`
 }
 
 
