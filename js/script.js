@@ -144,6 +144,10 @@ function fillBacklog() {
 
 let currentDraggedElement;
 
+/**
+ * 
+ * @param {*} id 
+ */
 function startDragging(id) {
     currentDraggedElement = id;
 }

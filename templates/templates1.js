@@ -49,34 +49,33 @@ function creatHTMLsmallCard(task, number) {
     return /*html*/ `
        <div class="board-notecard" draggable="true" ondragstart="startDragging(${number})">
 
-<div class="board-notecard-date">
-    <div> ${task.date}</div>
-    <div>${task.category}</div>
-
-    <div>${task.employees}</div>
-</div>
-
-<div class="board-notecard-description">
-    <div class="section-title">
-        ${task.title}
-    </div>
-    <div>
-        <h5>${task.description}</h5>
-    </div>
-    <div class="board-notecard-bottom">
-        
-        <div class="notecard-Button flex">
-            <div id="archive-button" onclick="cardArchive()">
-                <img style="width:1.5rem; height: 1.5rem" src="img/archive.png" alt="">
-            </div>
-            <div id="trash-button" onclick="cardTrash();">
-                <img style="width:1.5rem; height: 1.5rem" src="img/trash.png" alt="">
-            </div>
+        <div class="board-notecard-date">
+            <div> ${task.date}</div>
+            <div>${task.category}</div>
+            <div>${task.employees}</div>
         </div>
-    </div>
 
-</div>`
-}
+        <div class="board-notecard-description">
+            <div class="section-title">
+                ${task.title}
+            </div>
+            <div class="task-description">
+                <span>${task.description}</span>
+            </div>
+            <div class="board-notecard-bottom">
+        
+                <div class="notecard-Button flex">
+                    <div class="card-menu-button" id="archiveButton" onclick="cardArchive()">
+                       <img style="width:1.5rem; height: 1.5rem" src="img/archive.png" alt="">
+                    </div>
+                    <div class="card-menu-button" id="trashButton" onclick="cardTrash();">
+                        <img style="width:1.5rem; height: 1.5rem" src="img/trash.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>`
+        }
 
 
 function creatHTMLshowBacklog() {
