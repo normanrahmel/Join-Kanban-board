@@ -103,9 +103,10 @@ function creatHTMLbacklogCard(task, number) {
         <div>${task.date}</div>
     </div>
     <div class="backlog-card-items">${task.category}</div>
-    <!--
+    
     <div>
-        <div>
+        ${task.show}
+        <!-- <div>
             <span onclick="openStatusChange(${number})">
                 <div style="text-decoration: underline;">${task.show}
                     <div id="status${number}" class="dropdown-content d-none">
@@ -116,8 +117,8 @@ function creatHTMLbacklogCard(task, number) {
                     </div>
                 </div>
             </span>
-        </div>
-    </div>-->
+        </div> -->
+    </div>
     <div class="backlog-card-items">
         <div>${task.title}</div>
         <div>${task.description}</div>
