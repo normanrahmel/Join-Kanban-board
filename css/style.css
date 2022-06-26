@@ -100,16 +100,20 @@ html {
 /*Button*/
 
 .btn-1 {
-    background-image: linear-gradient(92.88deg, #49708a 9.16%, #49708a 43.89%, #49708a 64.72%);
-    border-radius: 8px;
+    background-image: linear-gradient(92.88deg, #d6cecc 9.16%, #d6cecc 43.89%, #d6cecc 64.72%);
+    border-radius: 2rem;
     border-style: none;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
     flex-shrink: 0;
     font-weight: 500;
-    height: 6rem;
-    padding: 0 1.6rem;
+    width: 100%;
+    height: 100%;
+    /*
+    height: 1rem;
+    padding: 0 0.2rem;
+    */
     text-align: center;
     text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
     transition: all .5s;

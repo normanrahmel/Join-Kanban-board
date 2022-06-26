@@ -44,33 +44,6 @@
     width: 33%;
 }
 
-/*
-.backlog-card {
-    display: flex;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-    border: 1px solid lightgray;
-    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    align-items: center;
-    flex-direction: row;
-}
-
-.backlog-card h4 {
-    margin: 5px;
-}
-
-.backlog-card-description-bottom {
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-.backlog-card-description-bottom div {
-    margin: 0 10px;
-}
-*/
-
 /*changing-status*/
 
 .task-status {

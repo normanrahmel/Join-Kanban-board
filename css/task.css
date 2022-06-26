@@ -38,3 +38,8 @@
 .task-header {
     margin-bottom: 1rem;
 }
+
+.task-button {
+    width: 100px;
+    height: 2rem;
+}

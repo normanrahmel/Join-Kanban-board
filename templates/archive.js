@@ -2,7 +2,7 @@ function creatHTMLshowArchive() {
     return /*html*/ `
         <div id="backlogTable" class="backlog-right-side mrg-lft mrg-rgt">
             <div>
-                <h2>Backlog</h2>
+                <h2>Archive</h2>
             </div>
             <div class="flex-center">
                 <div class="backlog-header flex">
@@ -15,7 +15,7 @@ function creatHTMLshowArchive() {
 }
 
 
-function creatHTMLArchiveCard(task, number) {
+function creatHTMLArchiveCard(task) {
     return /*html*/ `
 <div class="backlog-card backlog-border">
     <div class="backlog-card-items">

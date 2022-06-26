@@ -69,7 +69,7 @@ function creatHTMLsmallCard(task, number) {
             <div id="archive-button" onclick="cardArchive()">
                 <img style="width:1.5rem; height: 1.5rem" src="img/archive.png" alt="">
             </div>
-            <div id="trash-button" onclick="cardTrash(); changeTrashPicture()">
+            <div id="trash-button" onclick="cardTrash();">
                 <img style="width:1.5rem; height: 1.5rem" src="img/trash.png" alt="">
             </div>
         </div>
@@ -114,7 +114,6 @@ function creatHTMLbacklogCard(task, number) {
                         <div onclick="changingStatus('InProgress', ${number})">In Progress</div>
                         <div onclick="changingStatus('Testing', ${number})">testing</div>
                         <div onclick="changingStatus('Done', ${number})">done</div>
-
                     </div>
                 </div>
             </span>
@@ -169,9 +168,9 @@ function creatHTMLshowAddTask() {
                 <label for="taskEmployees">User: </label>
                 <input class="task-input" type="text" id="taskEmployees" placeholder="add User..." required>
             </div>
-
-            <button type="submit">Submit</button>
-
+            <div class="task-button">
+                <button class="lsubmit" type="submit">Submit</button>
+            </div>
         </form>
     </div>
 </div>`

@@ -2,7 +2,7 @@ function creatHTMLshowTrash() {
     return /*html*/ `
         <div id="backlogTable" class="backlog-right-side mrg-lft mrg-rgt">
             <div>
-                <h2>Backlog</h2>
+                <h2>Trash</h2>
             </div>
             <div class="flex-center">
                 <div class="backlog-header flex">
@@ -15,7 +15,7 @@ function creatHTMLshowTrash() {
 }
 
 
-function creatHTMLTrashCard(task, number) {
+function creatHTMLTrashCard(task) {
     return /*html*/ `
 <div class="backlog-card backlog-border">
     <div class="backlog-card-items">
