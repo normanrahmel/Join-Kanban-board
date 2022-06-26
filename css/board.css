@@ -36,6 +36,11 @@
     color: rgba(41, 49, 51, 0.9);
 }
 
+.section-title {
+    font-size: 1.33rem;
+    padding-top: 8px;
+}
+
 .board-notecard:hover {
     cursor: grab;
 }
