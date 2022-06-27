@@ -1,6 +1,6 @@
 [
     {
-        "urgency":"1",
+        "urgency":"3",
         "date" : "2022-06-24",
         "title" : "JS",
         "description" : "Backlog Status Changing",
@@ -18,7 +18,7 @@
         "show":"Done"
     },
     {
-        "urgency":"1",
+        "urgency":"2",
         "date" : "2022-06-24",
         "title" : "CSS",
         "description" : "Gestalltung Backlog",
@@ -36,7 +36,7 @@
         "show":"Testing"
     },
     {
-        "urgency":"1",
+        "urgency":"2",
         "date" : "2022-06-24",
         "title" : "JS",
         "description" : "Backend einfügen",
@@ -45,7 +45,7 @@
         "show":"ToDo"
     },
     {
-        "urgency":"1",
+        "urgency":"2",
         "date" : "2022-06-24",
         "title" : "CSS",
         "description" : "Gestalltung Board",
@@ -54,7 +54,7 @@
         "show":"InProgress"
     },
     {
-        "urgency":"1",
+        "urgency":"2",
         "date" : "2022-06-24",
         "title" : "CSS",
         "description" : "Gestalltung Add Task",

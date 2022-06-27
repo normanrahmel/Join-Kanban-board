@@ -121,18 +121,22 @@ function fillBoard() {
         if (tasks[number].show == "ToDo") {
             document.getElementById('boardToDoContent').innerHTML +=
                 creatHTMLsmallCard(tasks[number], number);
+            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${tasks[number].urgency}`);
         }
         if (tasks[number].show == "InProgress") {
             document.getElementById('boardInProgressContent').innerHTML +=
                 creatHTMLsmallCard(tasks[number], number);
+            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${tasks[number].urgency}`);
         }
         if (tasks[number].show == "Testing") {
             document.getElementById('boardTestingContent').innerHTML +=
                 creatHTMLsmallCard(tasks[number], number);
+            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${tasks[number].urgency}`);
         }
         if (tasks[number].show == "Done") {
             document.getElementById('boardDoneContent').innerHTML +=
                 creatHTMLsmallCard(tasks[number], number);
+            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${tasks[number].urgency}`);
         }
     }
 }

@@ -64,6 +64,10 @@ function creatHTMLsmallCard(task, number) {
                 <span>${task.description}</span>
             </div>
             
+            <div id="taskUrgency${number}"
+                class="task-urgency">
+            </div>
+
             <div class="board-notecard-bottom">
                 <div class="notecard-Button flex">
                     <div class="card-menu-button" 
