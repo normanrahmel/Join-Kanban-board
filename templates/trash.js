@@ -28,19 +28,18 @@ function creatHTMLTrashCard(task, number) {
         <div>${task.title}</div>
         <div>${task.description}</div>
     </div>
-    <button onclick="finalyDelete(${number});
-                     show(creatHTMLshowTrash()); 
-                     fillTrash()">
-
-                        finaly delete
-    </button>
-
     <button onclick="cardToBoard(${number}); 
                      show(creatHTMLshowTrash()); 
                      fillTrash()">
                      
                         remove to board
     </button>
-</div>    
-`
+
+    <button onclick="finalyDelete(${number});
+                     show(creatHTMLshowTrash()); 
+                     fillTrash()">
+
+                        finaly delete
+    </button>
+</div>`
 }
