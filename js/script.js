@@ -118,27 +118,27 @@ function saveTasks() {
  */
 function fillBoard() {
     for (let number = 0; number < tasks.length; number++) {
+        let task = tasks[number];
         if (tasks[number].show == "ToDo") {
-            document.getElementById('boardToDoContent').innerHTML +=
-                creatHTMLsmallCard(tasks[number], number);
-            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${tasks[number].urgency}`);
+            fillBoardSingleTask(task, number, 'boardToDoContent');            
         }
         if (tasks[number].show == "InProgress") {
-            document.getElementById('boardInProgressContent').innerHTML +=
-                creatHTMLsmallCard(tasks[number], number);
-            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${tasks[number].urgency}`);
+            fillBoardSingleTask(task, number, 'boardInProgressContent');
         }
         if (tasks[number].show == "Testing") {
-            document.getElementById('boardTestingContent').innerHTML +=
-                creatHTMLsmallCard(tasks[number], number);
-            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${tasks[number].urgency}`);
+            fillBoardSingleTask(task, number, 'boardTestingContent');
         }
         if (tasks[number].show == "Done") {
-            document.getElementById('boardDoneContent').innerHTML +=
-                creatHTMLsmallCard(tasks[number], number);
-            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${tasks[number].urgency}`);
+            fillBoardSingleTask(task, number, 'boardDoneContent');
         }
     }
+}
+
+
+function fillBoardSingleTask(task, number, idContent){
+    document.getElementById(idContent).innerHTML +=
+        creatHTMLsmallCard(task, number);
+    document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${task.urgency}`);
 }
 
 
