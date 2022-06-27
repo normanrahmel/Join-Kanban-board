@@ -148,10 +148,17 @@ function fillArchive() {
     for (let number = tasksArchive.length - 1; number > -1; number--) {
         const archiveTask = tasksArchive[number];
         document.getElementById('backlogTable').innerHTML +=
-        creatHTMLArchiveCard(archiveTask, number);
+            creatHTMLArchiveCard(archiveTask, number);
     }
 }
 
+function fillTrash(){
+    for (let number = tasksTrash.length - 1; number > -1; number--) {
+        const trashTask = tasksTrash[number];
+        document.getElementById('backlogTable').innerHTML +=
+            creatHTMLTrashCard(trashTask, number);
+    }
+}
 
 // ----- Drag and Drop -----
 

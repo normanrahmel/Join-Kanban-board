@@ -15,7 +15,7 @@ function creatHTMLshowTrash() {
 }
 
 
-function creatHTMLTrashCard(task) {
+function creatHTMLTrashCard(task, number) {
     return /*html*/ `
 <div class="backlog-card backlog-border">
     <div class="backlog-card-items">
