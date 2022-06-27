@@ -15,7 +15,7 @@ function creatHTMLshowArchive() {
 }
 
 
-function creatHTMLArchiveCard(task) {
+function creatHTMLArchiveCard(task, number) {
     return /*html*/ `
 <div class="backlog-card backlog-border">
     <div class="backlog-card-items">

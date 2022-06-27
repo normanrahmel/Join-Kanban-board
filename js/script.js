@@ -140,6 +140,19 @@ function fillBacklog() {
     }
 }
 
+
+/**
+ * Shows Tasks in Archive
+ */
+function fillArchive() {
+    for (let number = tasksArchive.length - 1; number > -1; number--) {
+        const archiveTask = tasksArchive[number];
+        document.getElementById('backlogTable').innerHTML +=
+        creatHTMLArchiveCard(archiveTask, number);
+    }
+}
+
+
 // ----- Drag and Drop -----
 
 let currentDraggedElement;
