@@ -2,6 +2,8 @@ let tasks = [];
 let tasksArchive = [];
 let tasksTrash = [];
 
+setURL('http://gruppe-264.developerakademie.net/smallest_backend_ever')
+
 /**
  * deactivates LoginScreen and shows the Board
  */
@@ -152,6 +154,10 @@ function fillArchive() {
     }
 }
 
+
+/**
+ * Shows Tasks in Trash
+ */
 function fillTrash(){
     for (let number = tasksTrash.length - 1; number > -1; number--) {
         const trashTask = tasksTrash[number];
