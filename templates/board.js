@@ -66,7 +66,7 @@ function creatHTMLsmallCard(task, number) {
             
             <div class="board-notecard-bottom">
                 <div id="taskUrgency${number}"
-                    class="task-urgency">
+                    class="board-task-urgency">
                 </div>
 
                 <div class="notecard-Button flex">
