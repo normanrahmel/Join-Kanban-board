@@ -1,8 +1,6 @@
 let tasks = [];
-let tasksArchive = [];
-let tasksTrash = [];
 
-setURL('http://gruppe-264.developerakademie.net/smallest_backend_ever')
+
 
 /**
  * deactivates LoginScreen and shows the Board
@@ -30,6 +28,7 @@ async function firstrender() {
     fillBoard();
 }
 
+
 /**
  * Checks for Items in Array else fetching Data from API
  */
@@ -43,6 +42,7 @@ async function loadTasks() {
     }
 }
 
+
 /**
  * Fetches Data from API
  * @returns responseJSON
@@ -52,6 +52,7 @@ async function loadTasksJSON_API() {
     return responseJSON = await responseAsText.json();
 }
 
+
 /**
  * Show / Rendering the complete Right Section
  * @param {var} section 
@@ -60,6 +61,7 @@ function show(section) {
     document.getElementById('rightSideComplete').innerHTML = section;
 
 }
+
 
 /**
  * Shows the Navigation Button of Current Page
@@ -72,6 +74,7 @@ function switchNavButton(number) {
     document.getElementById(`section${number}`).classList.add('active');
 }
 
+
 /**
  * Adding new Tasks and push to JSON
  */
@@ -81,6 +84,7 @@ function addTask() {
     tasks.push(newTaskASJSON);
     saveTasks();
 }
+
 
 /**
  * Pushes all Values from created Tasks into JSON
@@ -98,6 +102,7 @@ function creatTaskJSON() {
     return { urgency, date, title, description, category, employees, show };
 }
 
+
 /**
  * Save the Tasks to Storage
  * MOMENTAN NOCH LOCAL STATT BACKEND! --- TODO
@@ -106,6 +111,7 @@ function saveTasks() {
     let tasksJSONAsText = JSON.stringify(tasks);
     localStorage.setItem('tasksJSONactive', tasksJSONAsText);
 }
+
 
 /**
  * Places Data von the Board to the correct Sections
@@ -125,11 +131,12 @@ function fillBoard() {
                 creatHTMLsmallCard(tasks[number], number);
         }
         if (tasks[number].show == "Done") {
-            document.getElementById('boardToneContent').innerHTML +=
+            document.getElementById('boardDoneContent').innerHTML +=
                 creatHTMLsmallCard(tasks[number], number);
         }
     }
 }
+
 
 /**
  * Shows Tasks in Backlog as new created like a Historyboard
@@ -143,15 +150,37 @@ function fillBacklog() {
 }
 
 
+// ----- Archive -----
+
+function cardToArchive(number){
+    // spliceTask = tasks.splice(number, 1);
+    tasks[number].show = 'Archive';
+    saveTasks();
+    show(creatHTMLshowBoard());
+    fillBoard();
+}
+
+
 /**
  * Shows Tasks in Archive
  */
 function fillArchive() {
-    for (let number = tasksArchive.length - 1; number > -1; number--) {
-        const archiveTask = tasksArchive[number];
-        document.getElementById('backlogTable').innerHTML +=
-            creatHTMLArchiveCard(archiveTask, number);
+    for (let number = tasks.length - 1; number > -1; number--) {
+        const task = tasks[number];
+        if (task.show == "Archive") {
+            document.getElementById('backlogTable').innerHTML +=
+                creatHTMLsmallCard(task, number);
+        }
     }
+}
+
+
+function cardToTrash(number){
+    // spliceTask = tasks.splice(number, 1);
+    tasks[number].show = 'Trash';
+    saveTasks();
+    show(creatHTMLshowBoard());
+    fillBoard();
 }
 
 
@@ -159,16 +188,20 @@ function fillArchive() {
  * Shows Tasks in Trash
  */
 function fillTrash(){
-    for (let number = tasksTrash.length - 1; number > -1; number--) {
-        const trashTask = tasksTrash[number];
-        document.getElementById('backlogTable').innerHTML +=
-            creatHTMLTrashCard(trashTask, number);
+    for (let number = tasks.length - 1; number > -1; number--) {
+        const task = tasks[number];
+        if (task.show == "Trash") {
+            document.getElementById('backlogTable').innerHTML +=
+                creatHTMLsmallCard(task, number);
+        }
     }
 }
+
 
 // ----- Drag and Drop -----
 
 let currentDraggedElement;
+
 
 /**
  * 
@@ -178,9 +211,11 @@ function startDragging(id) {
     currentDraggedElement = id;
 }
 
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
+
 
 function moveTo(showArea) {
     tasks[currentDraggedElement]['show'] = showArea;
@@ -189,28 +224,32 @@ function moveTo(showArea) {
     fillBoard();
 }
 
+
+
+
+
 // ----- backlog changing status -----
-let activeChangingStatusBar;
+// let activeChangingStatusBar;
 
-function openStatusChange(number) {
-    document.getElementById(`status${number}`).classList.remove('d-none');
-    document.getElementById(`overlay`).classList.remove('d-none');
-    activeChangingStatusBar = `status${number}`;
+// function openStatusChange(number) {
+//     document.getElementById(`status${number}`).classList.remove('d-none');
+//     document.getElementById(`overlay`).classList.remove('d-none');
+//     activeChangingStatusBar = `status${number}`;
 
-}
+// }
 
-function closeStatusChange() {
-    document.getElementById(activeChangingStatusBar).classList.add('d-none');
-    document.getElementById(`overlay`).classList.add('d-none');
-}
+// function closeStatusChange() {
+//     document.getElementById(activeChangingStatusBar).classList.add('d-none');
+//     document.getElementById(`overlay`).classList.add('d-none');
+// }
 
-function changingStatus(status, number) {
-    tasks[number].show = status;
-    saveTasks();
-    closeStatusChange();
-    show(creatHTMLshowBacklog());
-    fillBacklog();
-}
+// function changingStatus(status, number) {
+//     tasks[number].show = status;
+//     saveTasks();
+//     closeStatusChange();
+//     show(creatHTMLshowBacklog());
+//     fillBacklog();
+// }
 
 
 // -------Section Trash-------

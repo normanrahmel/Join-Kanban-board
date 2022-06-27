@@ -1,5 +1,5 @@
 let jsonFromServer = {};
-let BASE_SERVER_URL;
+let BASE_SERVER_URL = 'http://gruppe-264.developerakademie.net/smallest_backend_ever';
 
 const backend = {
     setItem: function(key, item) {
@@ -17,6 +17,7 @@ const backend = {
         return saveJSONToServer();
     }
 };
+
 window.onload = async function() {
     downloadFromServer();
 }
@@ -27,9 +28,9 @@ async function downloadFromServer() {
     console.log('Loaded', result);
 }
 
-function setURL(url) {
-    BASE_SERVER_URL = url;
-}
+// function setURL(url) {
+//     BASE_SERVER_URL = url;
+// }
 
 /**
  * Loads a JSON or JSON Array to the Server
