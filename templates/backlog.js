@@ -24,25 +24,30 @@ function creatHTMLbacklogCard(task, number) {
     </div>
     <div class="backlog-card-items">${task.category}</div>
     
-    <div>
-        ${task.show}
-        <!-- <div>
-            <span onclick="openStatusChange(${number})">
-                <div style="text-decoration: underline;">${task.show}
-                    <div id="status${number}" class="dropdown-content d-none">
-                        <div onclick="changingStatus('ToDo', ${number})">ToDo</div>
-                        <div onclick="changingStatus('InProgress', ${number})">In Progress</div>
-                        <div onclick="changingStatus('Testing', ${number})">testing</div>
-                        <div onclick="changingStatus('Done', ${number})">done</div>
-                    </div>
-                </div>
-            </span>
-        </div> -->
-    </div>
     <div class="backlog-card-items">
         <div>${task.title}</div>
         <div>${task.description}</div>
     </div>
+
+    <div class="task-urgency">
+
+    </div>
+
+    
+        
+    <!-- <div>
+        <span onclick="openStatusChange(${number})">
+            <div style="text-decoration: underline;">${task.show}
+                <div id="status${number}" class="dropdown-content d-none">
+                    <div onclick="changingStatus('ToDo', ${number})">ToDo</div>
+                    <div onclick="changingStatus('InProgress', ${number})">In Progress</div>
+                    <div onclick="changingStatus('Testing', ${number})">testing</div>
+                    <div onclick="changingStatus('Done', ${number})">done</div>
+                </div>
+            </div>
+        </span>
+    </div> -->
+    
 </div>    
 `
 }

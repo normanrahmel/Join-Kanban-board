@@ -25,6 +25,7 @@
 /* Backlog Card */
 
 .backlog-card {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -42,6 +43,42 @@
 .backlog-card-items {
     min-height: 80px;
     width: 33%;
+}
+
+.task-urgency{
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.big-card-buttons{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.big-card-menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #d6cecc;
+    border-radius: 0.5rem;
+    margin-left: 4px;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5)inset ;
+}
+
+.big-card-menu-button:hover {
+    box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.8)inset ;
+    cursor: pointer;
 }
 
 /*changing-status*/
