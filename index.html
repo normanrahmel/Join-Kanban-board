@@ -30,7 +30,7 @@
     <title>Join KanBan Board</title>
 </head>
 
-<body onload="firstrender()">
+<body onload="init(); firstrender()">
     <!--Login-Section-->
     <div id="loginScreen" class="login-screen">
         <div class="login">
@@ -46,6 +46,7 @@
                 </div>
                 <div class="login-button">
                     <input class="lsubmit" type="submit" value="Login" onclick="initFirstrender()">
+                    <button>save</button>
                 </div>
             </form>
         </div>
