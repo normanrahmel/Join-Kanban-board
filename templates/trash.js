@@ -28,11 +28,17 @@ function creatHTMLTrashCard(task, number) {
         <div>${task.title}</div>
         <div>${task.description}</div>
     </div>
+
+    <div id="taskUrgency${number}"
+         class="task-urgency">
+    </div>
+
     <div class="big-card-buttons">
         <div class="big-card-menu-button">
             <img src="img/removeTrashGray.png" 
                  alt="remove to board"
                  title="remove to board"
+                 style="width:1.5rem; height: 1.5rem"
                  onclick="  cardToBoard(${number}); 
                             show(creatHTMLshowTrash()); 
                             fillTrash()">
@@ -42,6 +48,7 @@ function creatHTMLTrashCard(task, number) {
             <img src="img/finalytrashGray.png" 
                  alt="delete finaly"
                  title="delete finaly"
+                 style="width:1.5rem; height: 1.5rem"
                  onclick="  finalyDelete(${number});
                             show(creatHTMLshowTrash()); 
                             fillTrash()">

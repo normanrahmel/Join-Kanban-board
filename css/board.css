@@ -24,6 +24,7 @@
 }
 
 .board-notecard {
+    position: relative;
     min-width: 350px;
     border: 1px solid lightgray;
     margin-bottom: 20px;

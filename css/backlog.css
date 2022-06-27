@@ -51,8 +51,20 @@
     left: 20px;
     height: 20px;
     width: 20px;
-    background-color: red;
     border-radius: 50%;
+    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.3)inset ;
+}
+
+.task-urgency-color-1{
+    background-color: red;
+}
+
+.task-urgency-color-2{
+    background-color: yellow;
+}
+
+.task-urgency-color-2{
+    background-color: green;
 }
 
 .big-card-buttons{

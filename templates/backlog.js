@@ -29,8 +29,8 @@ function creatHTMLbacklogCard(task, number) {
         <div>${task.description}</div>
     </div>
 
-    <div class="task-urgency">
-
+    <div id="taskUrgency${number}"
+         class="task-urgency">
     </div>
 
     

@@ -146,6 +146,7 @@ function fillBacklog() {
         const task = tasks[number];
         document.getElementById('backlogTable').innerHTML +=
             creatHTMLbacklogCard(task, number);
+        document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${task.urgency}`);
     }
 }
 
@@ -159,6 +160,7 @@ function fillArchive() {
         if (task.show == "Archive") {
             document.getElementById('backlogTable').innerHTML +=
                 creatHTMLArchiveCard(task, number);
+            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${task.urgency}`);
         }
     }
 }
@@ -173,6 +175,7 @@ function fillTrash(){
         if (task.show == "Trash") {
             document.getElementById('backlogTable').innerHTML +=
                 creatHTMLTrashCard(task, number);
+            document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${task.urgency}`);
         }
     }
 }

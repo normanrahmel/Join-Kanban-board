@@ -59,11 +59,12 @@ function creatHTMLsmallCard(task, number) {
             <div class="section-title">
                 ${task.title}
             </div>
+
             <div class="task-description">
                 <span>${task.description}</span>
             </div>
+            
             <div class="board-notecard-bottom">
-        
                 <div class="notecard-Button flex">
                     <div class="card-menu-button" 
                          id="archiveButton" 
