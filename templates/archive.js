@@ -27,6 +27,19 @@ function creatHTMLArchiveCard(task, number) {
         <div>${task.title}</div>
         <div>${task.description}</div>
     </div>
+    <button onclick="cardToTrash(${number});
+                     show(creatHTMLshowArchive()); 
+                     fillArchive()">
+
+                        delete
+    </button>
+
+    <button onclick="cardToBoard(${number}); 
+                     show(creatHTMLshowArchive()); 
+                     fillArchive()">
+                     
+                        remove to board
+    </button>
 </div>    
 `
 }

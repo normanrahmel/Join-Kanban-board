@@ -65,10 +65,20 @@ function creatHTMLsmallCard(task, number) {
             <div class="board-notecard-bottom">
         
                 <div class="notecard-Button flex">
-                    <div class="card-menu-button" id="archiveButton" onclick="cardToArchive(${number})">
+                    <div class="card-menu-button" 
+                         id="archiveButton" 
+                         onclick="cardToArchive(${number}); 
+                                  show(creatHTMLshowBoard()); 
+                                  fillBoard()">
+
                        <img style="width:1.5rem; height: 1.5rem" src="img/archive.png" alt="">
                     </div>
-                    <div class="card-menu-button" id="trashButton" onclick="cardToTrash(${number});">
+                    <div class="card-menu-button" 
+                         id="trashButton" 
+                         onclick="cardToTrash(${number}); 
+                                  show(creatHTMLshowBoard()); 
+                                  fillBoard()">
+                                  
                         <img style="width:1.5rem; height: 1.5rem" src="img/trash.png" alt="">
                     </div>
                 </div>

@@ -150,17 +150,6 @@ function fillBacklog() {
 }
 
 
-// ----- Archive -----
-
-function cardToArchive(number){
-    // spliceTask = tasks.splice(number, 1);
-    tasks[number].show = 'Archive';
-    saveTasks();
-    show(creatHTMLshowBoard());
-    fillBoard();
-}
-
-
 /**
  * Shows Tasks in Archive
  */
@@ -169,18 +158,9 @@ function fillArchive() {
         const task = tasks[number];
         if (task.show == "Archive") {
             document.getElementById('backlogTable').innerHTML +=
-                creatHTMLsmallCard(task, number);
+                creatHTMLArchiveCard(task, number);
         }
     }
-}
-
-
-function cardToTrash(number){
-    // spliceTask = tasks.splice(number, 1);
-    tasks[number].show = 'Trash';
-    saveTasks();
-    show(creatHTMLshowBoard());
-    fillBoard();
 }
 
 
@@ -192,9 +172,34 @@ function fillTrash(){
         const task = tasks[number];
         if (task.show == "Trash") {
             document.getElementById('backlogTable').innerHTML +=
-                creatHTMLsmallCard(task, number);
+                creatHTMLTrashCard(task, number);
         }
     }
+}
+
+
+function cardToBoard(number){
+    tasks[number].show = 'ToDo';
+    saveTasks();
+}
+
+
+function cardToArchive(number){
+    tasks[number].show = 'Archive';
+    saveTasks();
+
+}
+
+
+function cardToTrash(number){
+    // spliceTask = tasks.splice(number, 1);
+    tasks[number].show = 'Trash';
+    saveTasks();
+    
+}
+
+function finalyDelete(number){
+    tasks.splice(number, 1);
 }
 
 
