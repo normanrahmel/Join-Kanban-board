@@ -2,9 +2,11 @@ function creatHTMLshowHelp() {
     return /*html*/ `
 <html lang="en">
 <body>
-    <div class="mrg-lft mrg-rgt mrg-btn section-help">
+    <div class="section-privacy section-help">
         <div>
-            <h1>Help</h1>
+        <div class="section-headline">
+            <span class="section-headline-font">Help</span>
+         </div>
             <p class="help-text">Join is a Kanban board. <br> It gives you an overview of your current work situation and helps visualising the project flow in agile project management. </p>
             <div class="ci-border-dark p-2">
                 This app was built as a training project at Developer Akademie. 

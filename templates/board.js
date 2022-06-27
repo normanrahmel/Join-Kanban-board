@@ -1,5 +1,8 @@
 function creatHTMLshowBoard() {
     return /*html*/ `
+     <div class="section-headline mrg-headline">
+            <span class="section-headline-font">Board</span>
+         </div>
         <div class="board-right-side">
             <div class="board-section"
                  ondrop="moveTo('ToDo')" 
@@ -90,4 +93,4 @@ function creatHTMLsmallCard(task, number) {
             </div>
 
         </div>`
-        }
+}

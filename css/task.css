@@ -1,7 +1,10 @@
 .task-section {
-    width: 400px;
     height: 90%;
     margin: 2rem;
+}
+
+.section-add-task {
+    display: flex;
 }
 
 .task-background {
@@ -9,6 +12,8 @@
     padding: 4rem;
     border-radius: 2rem;
     color: #d6cecc;
+    height: 80%;
+    width: 100%;
 }
 
 .task-form {
@@ -30,6 +35,11 @@
     margin-top: 0.3rem;
 }
 
+.form-field-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
 .form-field {
     display: flex;
     flex-direction: column;
@@ -44,7 +54,19 @@
     height: 2rem;
 }
 
+.task-submit {
+    background-color: #293133;
+    color: #d6cecc;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2)inset;
+    padding: 0.5rem;
+    border: 1px solid #d6cecc;
+    border-radius: 0.5rem;
+}
+
+.task-submit:hover {
+    box-shadow: 0px 0px 4px 2px rgba(255, 136, 0, 0.7)inset;
+}
+
 .task-description {
     height: 80px;
 }
-

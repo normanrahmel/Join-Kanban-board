@@ -1,7 +1,10 @@
 function creatHTMLshowPrivacy() {
     return /*html*/ `
-<div class="mrg-lft mrg-btm mrg-rgt section-privacy">
-    <h1>Privacy Notice</h1>
+
+<div class="section-privacy"> 
+        <div class="section-headline">
+            <span class="section-headline-font">Privacy Notice</span>
+         </div>
     <p>This app was built as a training project at Developer Akademie. There is no security layer implemented. <br> It is not supposed to be used with real life data. Do not enter personal data.</p>
     <p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</p>
     <p>Norman Rahmel, Marco Hilliges, Marcel de Zanna</p>

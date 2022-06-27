@@ -1,8 +1,8 @@
 function creatHTMLshowBacklog() {
     return /*html*/ `
         <div id="backlogTable" class="backlog-right-side mrg-lft mrg-rgt">
-            <div>
-                <h2>Backlog</h2>
+            <div class="section-headline">
+                <span class="section-headline-font">Backlog</span>
             </div>
             <div class="flex-center">
                 <div class="backlog-header flex">

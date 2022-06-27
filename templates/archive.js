@@ -1,9 +1,10 @@
 function creatHTMLshowArchive() {
     return /*html*/ `
-        <div id="backlogTable" class="backlog-right-side mrg-lft mrg-rgt">
-            <div>
-                <h2>Archive</h2>
-            </div>
+        <div id="backlogTable" class="backlog-right-side">
+        <div class="section-headline">
+       <span class="section-headline-font">Archive</span>
+    </div>    
+     
             <div class="flex-center">
                 <div class="backlog-header flex">
                     <div class="backlog-header-align"><h4>Assigned to</h4></div>

@@ -84,6 +84,20 @@ html {
     text-align: center;
 }
 
+.section-headline {
+    background-color: rgba(41, 49, 51, 0.9);
+    color: #ff8800;
+    border: #293133;
+    border-radius: 0.7rem;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.section-headline-font {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
 
 /* ----- for active switch on Nav-Links ----- */
 
@@ -129,6 +143,7 @@ html {
 
 
 /* ----- Bitte noch einsortieren ----- */
+
 
 /* #overlay {
     position: absolute;

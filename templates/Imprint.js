@@ -3,8 +3,10 @@ function creatHTMLshowAbout() {
 
 
 <body>
-    <div class='mrg-lft mrg-btm'>
-        <h1>Imprint</h1>
+    <div class='section-privacy'>
+    <div class="section-headline">
+            <span class="section-headline-font">Imprint</span>
+         </div>
         <p>Angaben gemäß § 5 TMG</p>
         <p>Norman Rahmel <br> Marcel de Zanna <br> Marco Hilliges
         </p>

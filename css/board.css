@@ -49,7 +49,6 @@
     font-size: 0.9rem;
     display: flex;
     justify-content: space-between;
-
 }
 
 .board-notecard h3 {
@@ -70,7 +69,7 @@
     border: 1px solid #293133;
     border-radius: 0.5rem;
     margin-left: 4px;
-    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2)inset ;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2)inset;
 }
 
 .card-menu-button:hover {
@@ -79,7 +78,7 @@
     cursor: pointer;
 }
 
-.board-task-urgency{
+.board-task-urgency {
     position: absolute;
     top: 10px;
     bottom: 0;
@@ -87,7 +86,7 @@
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.3)inset ;
+    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.3)inset;
 }
 
 .board-section::-webkit-scrollbar {
@@ -100,7 +99,7 @@
     border-left: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow:1px 2px 10px 1px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.5) inset;
 }
 
 .board-section::-webkit-scrollbar-thumb {
@@ -110,4 +109,10 @@
     border-left: 0;
     border-right: 0;
     background-color: #8a8a8a;
-  }
+}
+
+.mrg-headline {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
