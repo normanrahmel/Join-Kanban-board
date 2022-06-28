@@ -1,1 +1,86 @@
-{"users":"[\"Marco\"]"}
+{
+    "users":"[\"Marco\"]",
+    "tasks":[
+        {
+            "urgency":"3",
+            "date" : "2022-06-24",
+            "title" : "JS",
+            "description" : "Backlog Status Changing",
+            "category" : "Aufbau Website",
+            "employees" : "Marco",
+            "show":"Done"
+        },
+        {
+            "urgency":"1",
+            "date" : "2022-06-24",
+            "title" : "JS",
+            "description" : "Board Drag and Drop",
+            "category" : "Aufbau Website",
+            "employees" : "Marco",
+            "show":"Done"
+        },
+        {
+            "urgency":"2",
+            "date" : "2022-06-24",
+            "title" : "CSS",
+            "description" : "Gestalltung Backlog",
+            "category" : "Aufbau Website",
+            "employees" : "Team",
+            "show":"InProgress"
+        },
+        {
+            "urgency":"1",
+            "date" : "2022-06-24",
+            "title" : "JS",
+            "description" : "Funktionalität Backlog",
+            "category" : "Aufbau Website",
+            "employees" : "Team",
+            "show":"Testing"
+        },
+        {
+            "urgency":"2",
+            "date" : "2022-06-24",
+            "title" : "JS",
+            "description" : "Backend einfügen",
+            "category" : "Aufbau Website",
+            "employees" : "Team",
+            "show":"ToDo"
+        },
+        {
+            "urgency":"2",
+            "date" : "2022-06-24",
+            "title" : "CSS",
+            "description" : "Gestalltung Board",
+            "category" : "Aufbau Website",
+            "employees" : "Team",
+            "show":"InProgress"
+        },
+        {
+            "urgency":"2",
+            "date" : "2022-06-24",
+            "title" : "CSS",
+            "description" : "Gestalltung Add Task",
+            "category" : "Aufbau Website",
+            "employees" : "Team",
+            "show":"ToDo"
+        },
+        {
+            "urgency":"1",
+            "date" : "2022-06-24",
+            "title" : "All",
+            "description" : "Archive",
+            "category" : "Aufbau Website",
+            "employees" : "Team",
+            "show":"ToDo"
+        },
+        {
+            "urgency":"1",
+            "date" : "2022-06-24",
+            "title" : "All",
+            "description" : "Trash",
+            "category" : "Aufbau Website",
+            "employees" : "Team",
+            "show":"ToDo"
+        }
+    ]
+}

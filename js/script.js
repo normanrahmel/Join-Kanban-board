@@ -5,6 +5,7 @@ let users = [];
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
+    // tasks = backend.getItem('tasks') || [];
 }
 
 function addUser() {
@@ -15,7 +16,8 @@ function addUser() {
 /**
  * deactivates LoginScreen and shows the Board
  */
-function initFirstrender() {
+async function initFirstrender() {
+
     document.getElementById('loginScreen').classList.add('d-none');
     document.getElementById('rightSideComplete').classList.remove('d-none');
     document.getElementById('leftSideComplete').classList.remove('d-none');
@@ -33,6 +35,7 @@ function initFirstrender() {
  */
 async function firstrender() {
     // alert('Hi meine großartigen Teamkollegen');
+    await init();
     await loadTasks();
     show(creatHTMLshowBoard());
     fillBoard();
@@ -43,13 +46,14 @@ async function firstrender() {
  * Checks for Items in Array else fetching Data from API
  */
 async function loadTasks() {
-    let tasksJSONAsText = localStorage.getItem('tasksJSONactive');
+    tasks = backend.getItem('tasks');
+    // let tasksJSONAsText = localStorage.getItem('tasksJSONactive');
 
-    if (tasksJSONAsText) { //fängt Fehlermeldung ab, falls noch kein Array existiert
-        tasks = JSON.parse(tasksJSONAsText);
-    } else { // beim ersten Start wird ein Beispiel aus der JSON geladen 
-        tasks = await loadTasksJSON_API();
-    }
+    // if (tasksJSONAsText) { //fängt Fehlermeldung ab, falls noch kein Array existiert
+    //     tasks = JSON.parse(tasksJSONAsText);
+    // } else { // beim ersten Start wird ein Beispiel aus der JSON geladen 
+    //     tasks = await loadTasksJSON_API();
+    // }
 }
 
 
