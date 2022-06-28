@@ -162,7 +162,7 @@ function saveTasks() {
  * Places Data von the Board to the correct Sections
  */
 function fillBoard() {
-    for (let number = 0; number < tasks.length; number++) {
+    for (let number = tasks.length - 1; number > -1; number--) {
         let task = tasks[number];
         if (tasks[number].show == "ToDo") {
             fillBoardSingleTask(task, number, 'boardToDoContent');            
