@@ -122,8 +122,12 @@ function creatTaskJSON() {
  * MOMENTAN NOCH LOCAL STATT BACKEND! --- TODO
  */
 function saveTasks() {
-    let tasksJSONAsText = JSON.stringify(tasks);
-    localStorage.setItem('tasksJSONactive', tasksJSONAsText);
+    backend.setItem('tasks', tasks);
+
+    // backend.setItem('tasks', JSON.stringify(tasks)); //funktioniert nicht => zerstört die JSON-Strucktur
+
+    // let tasksJSONAsText = JSON.stringify(tasks);
+    // localStorage.setItem('tasksJSONactive', tasksJSONAsText);
 }
 
 
