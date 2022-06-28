@@ -59,10 +59,15 @@
 }
 
 @media (max-width: 850px) {
-    body {
-        flex-direction: column;
-    }
     .left-side-cmpl {
-        width: 100%;
+        z-index: 2;
+        position: fixed;
+        transform: translateX(0%);
+    }
+    .right-side-cmpl{
+        position: absolute;
+        left: 0 !important;
+        right: 0;
+        width: unset;
     }
 }
