@@ -52,3 +52,9 @@
     font-size: 12px;
     color: #d6cecc;
 }
+
+@media (max-width: 850px) {
+    .left-side-cmpl {
+        transform: translateX(-100%);
+    }
+}
