@@ -4,24 +4,29 @@ let users = [];
 
 async function init() {
     await downloadFromServer();
-    users = JSON.parse(backend.getItem('users')) || [];
+    users = backend.getItem('users');
+    // users = JSON.parse(backend.getItem('users')) || []; // funktioniert nicht!!!
     // tasks = backend.getItem('tasks') || [];
 }
 
-function addUser() {
-    users.push(username.value);
-    backend.setItem('users', JSON.stringify(users));
+
+function evaluationLogin(){
+    eliminatFormLoop();
+    let loginName = document.getElementById('lname').value;
+    let loginPw = document.getElementById('lpw').value;
+
+    for (let number = 0; number < users.length; number++) {
+        const user = users[number];
+        if(loginName == user.username ){
+            if(loginPw == user.pw){
+                closeLogin();
+            } 
+        }
+    }
 }
 
-/**
- * deactivates LoginScreen and shows the Board
- */
-async function initFirstrender() {
 
-    document.getElementById('loginScreen').classList.add('d-none');
-    document.getElementById('rightSideComplete').classList.remove('d-none');
-    document.getElementById('leftSideComplete').classList.remove('d-none');
-
+function eliminatFormLoop(){
     // eliminates the Loop on submit button
     var form = document.getElementById("sectionForm");
 
@@ -30,11 +35,33 @@ async function initFirstrender() {
 }
 
 
+// function addUser() {
+//     users.push(username.value);
+//     backend.setItem('users', JSON.stringify(users));
+// }
+
+
+/**
+ * deactivates LoginScreen and shows the Board
+ */
+async function closeLogin() {
+
+    document.getElementById('loginScreen').classList.add('d-none');
+    document.getElementById('rightSideComplete').classList.remove('d-none');
+    document.getElementById('leftSideComplete').classList.remove('d-none');
+
+    // eliminates the Loop on submit button
+    // var form = document.getElementById("sectionForm");
+
+    // function handleForm(event) { event.preventDefault(); }
+    // form.addEventListener('submit', handleForm);
+}
+
+
 /**
  * Inits the Board and Renders the Tasks and Templates
  */
 async function firstrender() {
-    // alert('Hi meine großartigen Teamkollegen');
     await init();
     await loadTasks();
     show(creatHTMLshowBoard());
@@ -61,10 +88,10 @@ async function loadTasks() {
  * Fetches Data from API
  * @returns responseJSON
  */
-async function loadTasksJSON_API() {
-    let responseAsText = await fetch('./JSON/storage.json');
-    return responseJSON = await responseAsText.json();
-}
+// async function loadTasksJSON_API() {
+//     let responseAsText = await fetch('./JSON/storage.json');
+//     return responseJSON = await responseAsText.json();
+// }
 
 
 /**

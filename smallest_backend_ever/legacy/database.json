@@ -1,22 +1,5 @@
 {
-    "users":[
-        {
-            "username" : "Marco",
-            "pw" : "1234"
-        },
-        {
-            "username" : "Norman",
-            "pw" : "1234"
-        },
-        {
-            "username" : "Marcel",
-            "pw" : "1234"
-        },
-        {
-            "username" : "Gast",
-            "pw" : "1234"
-        }
-    ],
+    "users":"[\"Marco\"]",
  
     "tasks":[
         {
