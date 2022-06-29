@@ -1,0 +1,27 @@
+
+/*Responsive Menu*/
+
+@media (max-width: 850px) {
+    .left-side-cmpl {
+        display: none;
+    }
+
+    .menu__toggle{
+        display: unset !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .backlog-card {
+        flex-direction: column;
+    }
+    .backlog-card-items {
+        width: 100%;
+    }
+    .task-urgency {
+        bottom: unset;
+        left: unset;
+        right: 15px;
+        top: 15px;
+    }
+}

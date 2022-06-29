@@ -59,19 +59,6 @@
 }
 
 
-/*Responsive Menu*/
-
-@media (max-width: 850px) {
-    .left-side-cmpl {
-        display: none;
-    }
-
-    .menu__toggle{
-        display: unset !important;
-    }
-}
-
-
 
 /*
 !!! This demo is being refactored !!!
