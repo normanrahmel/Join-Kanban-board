@@ -88,6 +88,10 @@
         width: 300px;
     }
 
+    .backlog-right-side {
+        margin: 2rem 10px;
+    }
+
     .task-section{
         margin: 2rem 10px;
     }
