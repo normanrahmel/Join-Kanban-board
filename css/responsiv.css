@@ -20,6 +20,7 @@
     }
     .backlog-card-items {
         width: 100%;
+        min-height: 50px;
     }
     .task-urgency {
         bottom: unset;
@@ -27,6 +28,10 @@
         right: 15px;
         top: 15px;
     }
+    .big-card-spacer{
+        margin-top: 5px;
+        justify-content: center;
+    } 
 }
 
 @media (max-width: 450px) {

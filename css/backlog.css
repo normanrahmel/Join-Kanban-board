@@ -15,7 +15,7 @@
 }
 
 .backlog-header {
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -45,6 +45,14 @@
 .backlog-card-items {
     min-height: 80px;
     width: 33%;
+}
+
+.card-widht-20{
+    width: 20%;
+}
+
+.card-widht-45{
+    width: 45%;
 }
 
 .task-urgency {
