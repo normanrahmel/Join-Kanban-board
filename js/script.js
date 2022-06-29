@@ -4,7 +4,7 @@ let users = [];
 
 
 /**
- * 
+ * runs the function downloadFromServer and loads user
  */
 async function init() {
     await downloadFromServer();
@@ -13,7 +13,7 @@ async function init() {
 
 
 /**
- * 
+ * checks the login and runs the function closeLogin if the input is correct
  */
 function evaluationLogin(){
     eliminatFormLoop();
@@ -32,10 +32,9 @@ function evaluationLogin(){
 
 
 /**
- * 
+ * eliminates the Loop on submit button
  */
 function eliminatFormLoop(){
-    // eliminates the Loop on submit button
     var form = document.getElementById("sectionForm");
 
     function handleForm(event) { event.preventDefault(); }
@@ -54,7 +53,7 @@ async function closeLogin() {
 
 
 /**
- * 
+ * open the loginScreen and removes the input
  */
 function logout(){
     document.getElementById('loginScreen').classList.remove('d-none');
@@ -77,7 +76,7 @@ async function firstrender() {
 
 
 /**
- * Checks for Items in Array else fetching Data from API
+ * load the tasks from backend-JSON into the task-JSON
  */
 async function loadTasks() {
     tasks = backend.getItem('tasks');
@@ -86,7 +85,7 @@ async function loadTasks() {
 
 /**
  * Show / Rendering the complete Right Section
- * @param {var} section 
+ * @param {var} section matching template
  */
 function show(section) {
     document.getElementById('rightSideComplete').innerHTML = section;
@@ -96,7 +95,7 @@ function show(section) {
 
 /**
  * Shows the Navigation Button of Current Page
- * @param {var} number 
+ * @param {var} number number of the position in the nav-bar
  */
 function switchNavButton(number) {
     for (let sectionNumber = 1; sectionNumber < 10; sectionNumber++) {
@@ -111,7 +110,7 @@ function switchNavButton(number) {
  */
 function addTask() {
     let newTaskASJSON = creatTaskJSON();
-    console.log(newTaskASJSON);
+    // console.log(newTaskASJSON);
     tasks.push(newTaskASJSON);
     saveTasks();
 }
@@ -135,7 +134,7 @@ function creatTaskJSON() {
 
 
 /**
- * Save the Tasks to Storage
+ * Save the Tasks to backend
  */
 function saveTasks() {
     backend.setItem('tasks', tasks);
