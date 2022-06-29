@@ -251,8 +251,8 @@ function cardToTrash(number){
 
 
 /**
- * 
- * @param {*} number 
+ * delete task for all time
+ * @param {*} number position in the tasks-JSON
  */
 function finalyDelete(number){
     tasks.splice(number, 1);
@@ -295,6 +295,7 @@ function moveTo(showArea) {
 
 
 // -------Section Trash-------
+
 /**
  * 
  */
