@@ -11,6 +11,21 @@
     }
 }
 
+@media (max-width: 750px) {
+    .backlog-card {
+        flex-direction: column;
+    }
+    .backlog-card-items {
+        width: 100%;
+    }
+    .task-urgency {
+        bottom: unset;
+        left: unset;
+        right: 15px;
+        top: 15px;
+    }
+}
+
 @media (max-width: 450px) {
     .backlog-card {
         flex-direction: column;

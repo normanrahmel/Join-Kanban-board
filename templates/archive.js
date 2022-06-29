@@ -32,7 +32,7 @@ function creatHTMLArchiveCard(task, number) {
     <div id="taskUrgency${number}"
          class="task-urgency">
     </div>
-
+    <div class="big-card-spacer">
     <div class="big-card-buttons">
         <div class="big-card-menu-button">
             <img src="img/add-file-32.png" 
@@ -53,6 +53,7 @@ function creatHTMLArchiveCard(task, number) {
                             show(creatHTMLshowArchive()); 
                             fillArchive()">
         </div>
+</div>
     </div>
 </div>    
 `

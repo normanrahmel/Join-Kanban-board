@@ -69,13 +69,18 @@
     background-color: green;
 }
 
+.big-card-spacer {
+    display: flex;
+    align-items: flex-end;
+}
+
 .big-card-buttons {
-    position: absolute;
+  /*  position: absolute;
     top: 0px;
-    bottom: 0;
+    bottom: 0;*/
     right: 10px;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
 }
 

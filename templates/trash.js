@@ -32,7 +32,7 @@ function creatHTMLTrashCard(task, number) {
     <div id="taskUrgency${number}"
          class="task-urgency">
     </div>
-
+    <div class="big-card-spacer">
     <div class="big-card-buttons">
         <div class="big-card-menu-button">
             <img src="img/removeTrashGray.png" 
@@ -53,7 +53,7 @@ function creatHTMLTrashCard(task, number) {
                             show(creatHTMLshowTrash()); 
                             fillTrash()">
         </div>
-    
+</div>
     </div>
    
 </div>`

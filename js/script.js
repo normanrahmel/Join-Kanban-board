@@ -396,5 +396,5 @@ function showMenu() {
         return currentMenuState;
     }
 
-    jsMenuNode.querySelector(`.${menuClassesNames.toggleClass}`).addEventListener('click', toggleMenu);
+    //jsMenuNode.querySelector(`.${menuClassesNames.toggleClass}`).addEventListener('click', toggleMenu);
 })();
