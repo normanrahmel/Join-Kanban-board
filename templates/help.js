@@ -19,7 +19,7 @@ function creatHTMLshowHelp() {
                     <li>You can create new categories for your individual purpose.</li>
                     <li>Decide whether the task should end up in the board for direct processing or in the backlog first.</li>
                 </ul>
-                <img class="help-img" src="img/Backlog.PNG" alt="Add task" title="Add task">
+                <img class="help-img" src="img/addtask-help.png" alt="Add task" title="Add task">
             </div>
             <div class="help-sections">
                 <h4><b>The board</b></h4>
@@ -30,7 +30,7 @@ function creatHTMLshowHelp() {
                     <li>The color of the left border of each task illustrates its importance level.</li>
                     <li>By clicking on the task you can see and edit all details.</li>
                 </ul>
-                <img class="help-img" src="img/board_about.png" alt="Board" title="Board">
+                <img class="help-img" src="img/board__help.png" alt="Board" title="Board">
             </div>
             <div class="help-sections">
                 <h4><b>The backlog</b></h4>
@@ -39,7 +39,7 @@ function creatHTMLshowHelp() {
                     <li>You can edit the task by clicking on it.</li>
                     <li>To move the task to the board click on the arrow icon.</li>
                 </ul>
-                <img class="help-img" src="img/backlog-help.png" alt="Backlog" title="Backlog">
+                <img class="help-img" src="img/backlog__help.png" alt="Backlog" title="Backlog">
             </div>
             <div class="help-sections">
                 <h4><b>The archive</b></h4>
@@ -49,7 +49,7 @@ function creatHTMLshowHelp() {
                     <li>By clicking on the restore icon the task is moved back to the "DONE" section on the board.</li>
                     <li>Deleting a task from the archive cannot be undone.</li>
                 </ul>
-                <img class="help-img" src="img/Backlog.PNG" alt="Archive" title="Archive">
+                <img class="help-img" src="img/archiv-help.png" alt="Archive" title="Archive">
             </div>
             <div class="help-sections">
                 <h4><b>The trash</b></h4>
@@ -59,7 +59,7 @@ function creatHTMLshowHelp() {
                     <li>Tasks that were deleted from the board can be restored to the "TODO" section of the board. <br> Tasks that were deleted from the backlog will be restored there.</li>
                     <li>Deleting from the recycle bin cannot be undone.</li>
                 </ul>
-                <img class="help-img" src="img/Backlog.PNG" alt="Trash" title="Trash">
+                <img class="help-img" src="img/trash-help.png" alt="Trash" title="Trash">
             </div>
         </div>
     </div>

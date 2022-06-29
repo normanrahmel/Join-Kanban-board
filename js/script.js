@@ -15,17 +15,17 @@ async function init() {
 /**
  * checks the login and runs the function closeLogin if the input is correct
  */
-function evaluationLogin(){
+function evaluationLogin() {
     eliminatFormLoop();
     let loginName = document.getElementById('lname').value;
     let loginPw = document.getElementById('lpw').value;
 
     for (let number = 0; number < users.length; number++) {
         const user = users[number];
-        if(loginName == user.username ){
-            if(loginPw == user.pw){
+        if (loginName == user.username) {
+            if (loginPw == user.pw) {
                 closeLogin();
-            } 
+            }
         }
     }
 }
@@ -34,7 +34,7 @@ function evaluationLogin(){
 /**
  * eliminates the Loop on submit button
  */
-function eliminatFormLoop(){
+function eliminatFormLoop() {
     var form = document.getElementById("sectionForm");
 
     function handleForm(event) { event.preventDefault(); }
@@ -55,7 +55,7 @@ async function closeLogin() {
 /**
  * open the loginScreen and removes the input
  */
-function logout(){
+function logout() {
     document.getElementById('loginScreen').classList.remove('d-none');
     document.getElementById('rightSideComplete').classList.add('d-none');
     document.getElementById('leftSideComplete').classList.add('d-none');
@@ -148,7 +148,7 @@ function fillBoard() {
     for (let number = tasks.length - 1; number > -1; number--) {
         let task = tasks[number];
         if (tasks[number].show == "ToDo") {
-            fillBoardSingleTask(task, number, 'boardToDoContent');            
+            fillBoardSingleTask(task, number, 'boardToDoContent');
         }
         if (tasks[number].show == "InProgress") {
             fillBoardSingleTask(task, number, 'boardInProgressContent');
@@ -169,7 +169,7 @@ function fillBoard() {
  * @param {*} number 
  * @param {*} idContent 
  */
-function fillBoardSingleTask(task, number, idContent){
+function fillBoardSingleTask(task, number, idContent) {
     document.getElementById(idContent).innerHTML +=
         creatHTMLsmallCard(task, number);
     document.getElementById(`taskUrgency${number}`).classList.add(`task-urgency-color-${task.urgency}`);
@@ -207,7 +207,7 @@ function fillArchive() {
 /**
  * Shows Tasks in Trash
  */
-function fillTrash(){
+function fillTrash() {
     for (let number = tasks.length - 1; number > -1; number--) {
         const task = tasks[number];
         if (task.show == "Trash") {
@@ -223,7 +223,7 @@ function fillTrash(){
  * 
  * @param {*} number 
  */
-function cardToBoard(number){
+function cardToBoard(number) {
     tasks[number].show = 'ToDo';
     saveTasks();
 }
@@ -233,7 +233,7 @@ function cardToBoard(number){
  * 
  * @param {*} number 
  */
-function cardToArchive(number){
+function cardToArchive(number) {
     tasks[number].show = 'Archive';
     saveTasks();
 }
@@ -243,10 +243,10 @@ function cardToArchive(number){
  * 
  * @param {*} number 
  */
-function cardToTrash(number){
+function cardToTrash(number) {
     // spliceTask = tasks.splice(number, 1);
     tasks[number].show = 'Trash';
-    saveTasks();    
+    saveTasks();
 }
 
 
@@ -254,7 +254,7 @@ function cardToTrash(number){
  * delete task for all time
  * @param {*} number position in the tasks-JSON
  */
-function finalyDelete(number){
+function finalyDelete(number) {
     tasks.splice(number, 1);
 }
 
@@ -327,4 +327,74 @@ function changeTrashPicture() {
 //     fillBacklog();
 // }
 
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
 
+/**
+ * Responsive Menu
+ */
+
+function showMenu() {
+    let menu_activated = document.getElementById('show-menu');
+    if (!menu_activated.classList.contains('menu_activated')) {
+        menu_activated.classList.add('menu_activated');
+    } else {
+        document.getElementById('show-menu').classList.remove('menu_activated');
+    }
+}
+
+
+(function() {
+    'use strict';
+
+    class Menu {
+        constructor(settings) {
+            this.menuRootNode = settings.menuRootNode;
+            this.isOpened = false;
+        }
+
+        changeMenuState(menuState) {
+            return this.isOpened = !menuState;
+        }
+
+        changeToggleHint(toggleHint, toggleNode) {
+            toggleNode.textContent = toggleHint;
+            return toggleHint;
+        }
+    }
+
+    const menuClassesNames = {
+        rootClass: 'menu',
+        activeClass: 'menu_activated',
+        toggleClass: 'menu__toggle',
+        toggleHintClass: 'menu__toggle-hint'
+    }
+
+    const jsMenuNode = document.querySelector(`.${menuClassesNames.rootClass}`);
+    const demoMenu = new Menu({
+        menuRootNode: jsMenuNode
+    });
+
+    function getCurrentToggleHint(currentMenuState) {
+        return (currentMenuState !== true) ? 'Open menu' : 'Close menu';
+    }
+
+    function toggleMenu(event) {
+
+        let currentMenuState = demoMenu.changeMenuState(demoMenu.isOpened);
+        let toggleHint = getCurrentToggleHint(currentMenuState);
+
+        demoMenu.changeToggleHint(
+            toggleHint,
+            demoMenu.menuRootNode.querySelector(`.${menuClassesNames.toggleHintClass}`)
+        );
+        demoMenu.menuRootNode.classList.toggle(`${menuClassesNames.activeClass}`);
+
+        return currentMenuState;
+    }
+
+    jsMenuNode.querySelector(`.${menuClassesNames.toggleClass}`).addEventListener('click', toggleMenu);
+})();

@@ -48,11 +48,11 @@
                 <div class="login-button">
                     <input class="lsubmit" type="submit" value="Login" onclick="evaluationLogin()">
                 </div>
-                <span style="font-size: 0.8rem; margin-top: 0.8rem;"><i> Testzugang Name:</i> Gast <i>Pw:</i>  1234</span>
+                <span style="font-size: .8rem; margin-top: .8rem;"><i> Testzugang Name:</i> Gast <i>Pw:</i>  1234</span>
             </form>
         </div>
     </div>
-
+    <!--Main Section-->
     <div id="leftSideComplete" class="left-side-cmpl d-none flex-col ft-reg">
         <div class="nav-sticky flex-col">
             <div class="nav-logo">
@@ -80,7 +80,48 @@
     </div>
     <div class="right-side-cmpl d-none" id="rightSideComplete">
     </div>
+    <!--Responsive Menu-->
 
+    <div class="menu" id="show-menu" onclick="showMenu()">
+        <nav class="menu__nav" autofocus>
+            <ul class="menu__list r-list">
+                <li class="menu__group">
+                    <a onclick="show(creatHTMLshowBoard()); fillBoard(); switchNavButton('1')" href="#0" class="menu__link r-link">Board</a>
+                </li>
+                <li class="menu__group">
+                    <a onclick="show(creatHTMLshowBacklog()); fillBacklog();switchNavButton('2')" href="#0" class="menu__link r-link">Backlog</a>
+                </li>
+                <li class="menu__group">
+                    <a onclick="show(creatHTMLshowAddTask()); switchNavButton('3')" href="#0" class="menu__link r-link">Add task</a>
+                </li>
+                <li class="menu__group">
+                    <a onclick="show(creatHTMLshowArchive()); fillArchive(); switchNavButton('4')" href="#0" class="menu__link r-link">Archive</a>
+                </li>
+                <li class="menu__group">
+                    <a onclick="show(creatHTMLshowTrash()); fillTrash(); switchNavButton('5')" href="#0" class="menu__link r-link">Trash</a>
+                </li>
+                <li class="menu__group">
+                    <a onclick="show(creatHTMLshowHelp());switchNavButton('6')" href="#0" class="menu__link r-link">Help</a>
+                </li>
+                <li class="menu__group">
+                    <a onclick="show(creatHTMLshowAbout());switchNavButton('7')" href="#0" class="menu__link r-link">Imprint</a>
+                </li>
+                <li class="menu__group">
+                    <a onclick="show(creatHTMLshowPrivacy());switchNavButton('8')" href="#0" class="menu__link r-link">Privacy</a>
+                </li>
+                <li class="menu__group">
+                    <a onclick="switchNavButton('9');logout()" href="#0" class="menu__link r-link">Logout</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span  class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__toggle-hint screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+    </div>
     <!-- <div id="overlay" class="d-none" onclick="closeStatusChange()">.</div> -->
 </body>
 
