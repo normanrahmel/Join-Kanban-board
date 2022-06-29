@@ -2,14 +2,19 @@ let tasks = [];
 
 let users = [];
 
+
+/**
+ * 
+ */
 async function init() {
     await downloadFromServer();
     users = backend.getItem('users');
-    // users = JSON.parse(backend.getItem('users')) || []; // funktioniert nicht!!!
-    // tasks = backend.getItem('tasks') || [];
 }
 
 
+/**
+ * 
+ */
 function evaluationLogin(){
     eliminatFormLoop();
     let loginName = document.getElementById('lname').value;
@@ -26,6 +31,9 @@ function evaluationLogin(){
 }
 
 
+/**
+ * 
+ */
 function eliminatFormLoop(){
     // eliminates the Loop on submit button
     var form = document.getElementById("sectionForm");
@@ -35,26 +43,25 @@ function eliminatFormLoop(){
 }
 
 
-// function addUser() {
-//     users.push(username.value);
-//     backend.setItem('users', JSON.stringify(users));
-// }
-
-
 /**
  * deactivates LoginScreen and shows the Board
  */
 async function closeLogin() {
-
     document.getElementById('loginScreen').classList.add('d-none');
     document.getElementById('rightSideComplete').classList.remove('d-none');
     document.getElementById('leftSideComplete').classList.remove('d-none');
+}
 
-    // eliminates the Loop on submit button
-    // var form = document.getElementById("sectionForm");
 
-    // function handleForm(event) { event.preventDefault(); }
-    // form.addEventListener('submit', handleForm);
+/**
+ * 
+ */
+function logout(){
+    document.getElementById('loginScreen').classList.remove('d-none');
+    document.getElementById('rightSideComplete').classList.add('d-none');
+    document.getElementById('leftSideComplete').classList.add('d-none');
+    document.getElementById('lname').value = '';
+    document.getElementById('lpw').value = '';
 }
 
 
@@ -74,24 +81,7 @@ async function firstrender() {
  */
 async function loadTasks() {
     tasks = backend.getItem('tasks');
-    // let tasksJSONAsText = localStorage.getItem('tasksJSONactive');
-
-    // if (tasksJSONAsText) { //fängt Fehlermeldung ab, falls noch kein Array existiert
-    //     tasks = JSON.parse(tasksJSONAsText);
-    // } else { // beim ersten Start wird ein Beispiel aus der JSON geladen 
-    //     tasks = await loadTasksJSON_API();
-    // }
 }
-
-
-/**
- * Fetches Data from API
- * @returns responseJSON
- */
-// async function loadTasksJSON_API() {
-//     let responseAsText = await fetch('./JSON/storage.json');
-//     return responseJSON = await responseAsText.json();
-// }
 
 
 /**
@@ -146,15 +136,9 @@ function creatTaskJSON() {
 
 /**
  * Save the Tasks to Storage
- * MOMENTAN NOCH LOCAL STATT BACKEND! --- TODO
  */
 function saveTasks() {
     backend.setItem('tasks', tasks);
-
-    // backend.setItem('tasks', JSON.stringify(tasks)); //funktioniert nicht => zerstört die JSON-Strucktur
-
-    // let tasksJSONAsText = JSON.stringify(tasks);
-    // localStorage.setItem('tasksJSONactive', tasksJSONAsText);
 }
 
 
@@ -180,6 +164,12 @@ function fillBoard() {
 }
 
 
+/**
+ * 
+ * @param {*} task 
+ * @param {*} number 
+ * @param {*} idContent 
+ */
 function fillBoardSingleTask(task, number, idContent){
     document.getElementById(idContent).innerHTML +=
         creatHTMLsmallCard(task, number);
@@ -230,26 +220,41 @@ function fillTrash(){
 }
 
 
+/**
+ * 
+ * @param {*} number 
+ */
 function cardToBoard(number){
     tasks[number].show = 'ToDo';
     saveTasks();
 }
 
 
+/**
+ * 
+ * @param {*} number 
+ */
 function cardToArchive(number){
     tasks[number].show = 'Archive';
     saveTasks();
-
 }
 
 
+/**
+ * 
+ * @param {*} number 
+ */
 function cardToTrash(number){
     // spliceTask = tasks.splice(number, 1);
     tasks[number].show = 'Trash';
-    saveTasks();
-    
+    saveTasks();    
 }
 
+
+/**
+ * 
+ * @param {*} number 
+ */
 function finalyDelete(number){
     tasks.splice(number, 1);
 }
@@ -269,11 +274,19 @@ function startDragging(id) {
 }
 
 
+/**
+ * 
+ * @param {*} ev 
+ */
 function allowDrop(ev) {
     ev.preventDefault();
 }
 
 
+/**
+ * 
+ * @param {*} showArea 
+ */
 function moveTo(showArea) {
     tasks[currentDraggedElement]['show'] = showArea;
     saveTasks();
@@ -282,7 +295,13 @@ function moveTo(showArea) {
 }
 
 
-
+// -------Section Trash-------
+/**
+ * 
+ */
+function changeTrashPicture() {
+    document.getElementById('trash-button').src = 'img/trash-or.png';
+}
 
 
 // ----- backlog changing status -----
@@ -309,7 +328,3 @@ function moveTo(showArea) {
 // }
 
 
-// -------Section Trash-------
-function changeTrashPicture() {
-    document.getElementById('trash-button').src = 'img/trash-or.png';
-}
