@@ -65,6 +65,10 @@
     .left-side-cmpl {
         display: none;
     }
+
+    .menu__toggle{
+        display: unset !important;
+    }
 }
 
 
@@ -243,6 +247,7 @@ DEPENDENCES
 }
 
 .menu__toggle {
+    display: none;
     box-sizing: border-box;
     width: var(--uiMenuCircleSize);
     height: var(--uiMenuCircleHeight);
@@ -425,3 +430,4 @@ body {
     }
 }
   */
+
