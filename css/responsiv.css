@@ -1,5 +1,17 @@
 
 /*Responsive Menu*/
+@media (min-width: 1800px) {
+    .board-section{
+        min-height: 85vh;
+        max-height: 85vh
+    }
+}
+
+@media (max-width: 1000px) {
+    .board-section{
+        max-height: 150vh
+    }
+}
 
 @media (max-width: 850px) {
     .left-side-cmpl {
@@ -51,5 +63,30 @@
         left: unset;
         right: 15px;
         top: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .board-section {
+        min-width: unset;
+    }
+    .board-notecard {
+        min-width: unset;
+        min-width: unset;
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px) {
+    .board-notecard {
+        width: 270px;        
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 300px) {
+    .board-notecard {
+        width: 240px;
     }
 }
