@@ -55,14 +55,26 @@
     .backlog-card {
         flex-direction: column;
     }
+
     .backlog-card-items {
         width: 100%;
     }
+
     .task-urgency {
         bottom: unset;
         left: unset;
         right: 15px;
         top: 15px;
+    }
+
+    .task-background {
+        padding: 4rem 10px;
+    }
+
+    .form-field-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
     }
 }
 
@@ -74,6 +86,10 @@
         min-width: unset;
         min-width: unset;
         width: 300px;
+    }
+
+    .task-section{
+        margin: 2rem 10px;
     }
 }
 
