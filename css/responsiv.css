@@ -15,6 +15,9 @@
     .backlog-card {
         flex-direction: column;
     }
+    .backlog-header {
+        display: none;
+    }
     .backlog-card-items {
         width: 100%;
     }
