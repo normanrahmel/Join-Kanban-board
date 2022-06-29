@@ -9,6 +9,11 @@
     .menu__toggle{
         display: unset !important;
     }
+
+    .task-description{
+        height: unset;
+        min-height: 40px;
+    }
 }
 
 @media (max-width: 750px) {
