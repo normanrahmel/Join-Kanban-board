@@ -79,6 +79,15 @@
 }
 
 @media (max-width: 400px) {
+    .login-form {
+        width: 230px;
+        padding: 3rem 5px 3rem 15px;
+    }
+    .login-field{
+        display: flex;
+        flex-direction: column;
+    }
+
     .board-section {
         min-width: unset;
     }
