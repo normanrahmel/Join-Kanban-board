@@ -10,11 +10,17 @@
     width: 180px;
     background-color: rgba(41, 49, 51, 1);
     align-items: start;
+    background-image: url("/img/bgr1.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 
 .nav-sticky {
     position: sticky;
+    background-color: rgba(41, 49, 51, 0.8);
     top: 0;
+    height: 100%;
 }
 
 .nav-logo {
