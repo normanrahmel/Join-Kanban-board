@@ -125,11 +125,14 @@ function addTask() {
     addTaskSuccess();
     setTimeout(() => {
         
-    }, 4000);
+        show(creatHTMLshowAddTask())
+    }, 2000);
+
 }
 
-function addTaskSucces() {
-    document.getElementById('task-succes') += innerHTML.htmlAddSucces();
+function addTaskSuccess() {
+    document.getElementById('task-succes').innerHTML += 
+        htmlAddSuccess();
 }
 
 /**

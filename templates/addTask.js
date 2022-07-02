@@ -7,7 +7,7 @@ function creatHTMLshowAddTask() {
     <div class="section-add-task">
         <div class="task-background">
 
-            <form class="task-form" action="" onsubmit="addTask(); show(creatHTMLshowAddTask())">
+            <form class="task-form" action="" onsubmit="addTask();">
                 <!-- action="" method="get" -->
 
                 <div class="form-field">
@@ -53,7 +53,7 @@ function creatHTMLshowAddTask() {
  `;
 }
 
-function htmlAddSucces() {
+function htmlAddSuccess() {
     return `
     <span id="task-add-succes">Succes!</span>
     `
