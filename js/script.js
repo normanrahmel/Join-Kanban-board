@@ -119,7 +119,7 @@ function switchNavButton(number) {
  */
 function addTask() {
     let newTaskASJSON = creatTaskJSON();
-    // console.log(newTaskASJSON);
+    console.log(newTaskASJSON);
     tasks.push(newTaskASJSON);
     saveTasks();
     addTaskSuccess();
