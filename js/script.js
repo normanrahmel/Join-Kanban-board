@@ -19,14 +19,19 @@ function evaluationLogin() {
     eliminatFormLoop();
     let loginName = document.getElementById('lname').value;
     let loginPw = document.getElementById('lpw').value;
+    let login = false;
 
     for (let number = 0; number < users.length; number++) {
         const user = users[number];
         if (loginName == user.username) {
             if (loginPw == user.pw) {
                 closeLogin();
+                login = true;
             }
         }
+    }
+    if (login == false) {
+        alert("Bitte richtiges Passwort eingeben");
     }
 }
 
