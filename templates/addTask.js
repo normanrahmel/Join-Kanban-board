@@ -43,7 +43,8 @@ function creatHTMLshowAddTask() {
                     <input class="task-input" type="text" id="taskEmployees" placeholder="add User..." required>
                 </div>
                 <div class="task-button">
-                    <button class="task-submit" type="submit" onclick="addTaskSucces();">Submit</button>
+                    <button class="task-submit" type="submit" onclick="">Submit</button>
+                    <div id="task-succes"></div>
                 </div>
             </form>
         </div>

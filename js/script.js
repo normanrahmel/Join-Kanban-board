@@ -15,7 +15,7 @@ async function init() {
 /**
  * checks the login and runs the function closeLogin if the input is correct
  */
-/*
+
 function evaluationLogin() {
     eliminatFormLoop();
     let loginName = document.getElementById('lname').value;
@@ -31,11 +31,12 @@ function evaluationLogin() {
             }
         }
     }
+    
     if (login == false) {
         alert("Bitte richtiges Passwort eingeben");
     }
 }
-*/
+
 
 /**
  * eliminates the Loop on submit button
@@ -121,10 +122,14 @@ function addTask() {
     // console.log(newTaskASJSON);
     tasks.push(newTaskASJSON);
     saveTasks();
+    addTaskSuccess();
+    setTimeout(() => {
+        
+    }, 4000);
 }
 
 function addTaskSucces() {
-document.getElementById('task-succes') += innerHTML.htmlAddSucces();
+    document.getElementById('task-succes') += innerHTML.htmlAddSucces();
 }
 
 /**
