@@ -15,6 +15,7 @@ async function init() {
 /**
  * checks the login and runs the function closeLogin if the input is correct
  */
+/*
 function evaluationLogin() {
     eliminatFormLoop();
     let loginName = document.getElementById('lname').value;
@@ -34,7 +35,7 @@ function evaluationLogin() {
         alert("Bitte richtiges Passwort eingeben");
     }
 }
-
+*/
 
 /**
  * eliminates the Loop on submit button
@@ -122,6 +123,9 @@ function addTask() {
     saveTasks();
 }
 
+function addTaskSucces() {
+document.getElementById('task-succes') += innerHTML.htmlAddSucces();
+}
 
 /**
  * Pushes all Values from created Tasks into JSON
