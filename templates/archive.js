@@ -10,6 +10,7 @@ function creatHTMLshowArchive() {
                     <div class="backlog-header-align card-widht-20"><h4>Assigned to</h4></div>
                     <div class="backlog-header-align card-widht-20"><h4>Category</h4></div>
                     <div class="backlog-header-align card-widht-45"><h4>Details</h4></div>
+                    <div style="color: transparent;">.</div>
                 </div>
             </div>
         </div>`

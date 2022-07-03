@@ -89,7 +89,7 @@
     }
 
     .board-section {
-        min-width: unset;
+        min-width: 270px;
     }
     .board-notecard {
         min-width: unset;

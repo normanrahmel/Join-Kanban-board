@@ -75,8 +75,8 @@ function creatHTMLsmallCard(task, number) {
 
                     <div>
                         <span onclick="openStatusChange(${number})">
-                            <div style="text-decoration: underline;">${task.show}
-                                <div id="status${number}" class="dropdown-content d-none">
+                            <div class="card-menu-button">${task.show}
+                                <div id="status${number}" class="dropdown-content dropdown-height-0">
                                     <div onclick="changingStatus('ToDo', ${number})">ToDo</div>
 
                                     <div onclick="changingStatus('InProgress', ${number})">In Progress</div>
