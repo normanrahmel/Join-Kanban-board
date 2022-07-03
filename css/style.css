@@ -27,6 +27,10 @@ html {
 
 /* ----- Multifunctional Classes ----- */
 
+.no-scroll{
+    overflow: hidden;
+}
+
 .d-none {
     display: none !important;
 }
@@ -151,7 +155,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
-    height: 100vh;
+    height: 10000vh;
     
     color: transparent;
 }

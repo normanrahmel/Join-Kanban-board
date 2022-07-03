@@ -324,6 +324,7 @@ let activeChangingStatusBar;
 function openStatusChange(number) {
     document.getElementById(`status${number}`).classList.remove('dropdown-height-0');
     document.getElementById(`overlay`).classList.remove('d-none');
+    document.getElementById(`body`).classList.add('no-scroll');
     activeChangingStatusBar = `status${number}`;
 
 }
@@ -331,6 +332,7 @@ function openStatusChange(number) {
 function closeStatusChange() {
     document.getElementById(activeChangingStatusBar).classList.add('dropdown-height-0');
     document.getElementById(`overlay`).classList.add('d-none');
+    document.getElementById(`body`).classList.remove('no-scroll');
 }
 
 function changingStatus(status, number) {
