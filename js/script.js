@@ -28,13 +28,8 @@ function evaluationLogin() {
             if (loginPw == user.pw) {
                 closeLogin();
                 login = true;
-            }
-        }
-    }
-    
-    if (login == false) {
-        alert("Bitte richtiges Passwort eingeben");
-    }
+    }}}
+    if (login == false) {alert("Bitte richtiges Passwort eingeben");}
 }
 
 
