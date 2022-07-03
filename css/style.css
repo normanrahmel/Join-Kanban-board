@@ -145,7 +145,7 @@ html {
 /* ----- Bitte noch einsortieren ----- */
 
 
-/* #overlay {
+#overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -154,4 +154,4 @@ html {
     height: 100vh;
     
     color: transparent;
-} */
+}

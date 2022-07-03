@@ -72,6 +72,22 @@ function creatHTMLsmallCard(task, number) {
                     class="board-task-urgency">
                 </div>
 
+                <div>
+                    <span onclick="openStatusChange(${number})">
+                        <div style="text-decoration: underline;">${task.show}
+                            <div id="status${number}" class="dropdown-content d-none">
+                                <div onclick="changingStatus('ToDo', ${number})">ToDo</div>
+
+                                <div onclick="changingStatus('InProgress', ${number})">In Progress</div>
+
+                                <div onclick="changingStatus('Testing', ${number})">testing</div>
+                                
+                                <div onclick="changingStatus('Done', ${number})">done</div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+
                 <div class="notecard-Button flex">
                     <div class="card-menu-button" 
                          id="archiveButton" 
