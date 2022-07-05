@@ -7,7 +7,7 @@ function creatHTMLshowAddTask() {
     <div class="section-add-task">
         <div class="task-background">
 
-            <form class="task-form" action="" onsubmit="addTask();">
+            <form class="task-form" action="" onsubmit="event.preventDefault(), addTask();">
                 <!-- action="" method="get" -->
 
                 <div class="form-field">

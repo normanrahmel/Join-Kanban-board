@@ -46,11 +46,14 @@
                     <label class="llabel" for="lname">Password:</label>
                     <input class="linput" type="password" style='color: #d6cecc; background-color: unset;' id="lpw" name="lpw" placeholder="enter Password"><br><br>
                 </div>
-                <div class="login-button">
-                    <input class="lsubmit" type="submit" value="Login" onclick="evaluationLogin()">
+                <div class="flex">
+                    <div class="login-button">
+                        <input class="lsubmit" type="submit" value="Login" onclick="evaluationLogin()">
+                    </div>
+                    <div style="margin-left: 1rem;" class="login-button">
+                        <input class="lsubmit" type="submit" value="Gast" onclick="evaluationLogin('Gast', '1234')">
+                    </div>
                 </div>
-                <span style="font-size: .8rem; margin-top: .8rem;"><i> Testzugang Name:</i> Gast <i>Pw:</i>
-                        1234</span>
             </form>
         </div>
     </div>
@@ -63,15 +66,15 @@
             </div>
             <div class="nav-menu flex-col">
                 <div class="navbar-nav flex-col">
-                    <a onclick="show(creatHTMLshowBoard()); fillBoard(); switchNavButton('1')" href="#" id="section1" class="nav-link border-lft active">Board</a>
-                    <a onclick="show(creatHTMLshowBacklog()); fillBacklog();switchNavButton('2')" href="#" id="section2" class="nav-link border-lft">Backlog</a>
-                    <a onclick="show(creatHTMLshowAddTask()); switchNavButton('3')" href="#" id="section3" class="nav-link border-lft">Add task</a>
-                    <a onclick="show(creatHTMLshowArchive()); fillArchive(); switchNavButton('4')" href="#" id="section4" class="nav-link border-lft">Archive</a>
-                    <a onclick="show(creatHTMLshowTrash()); fillTrash(); switchNavButton('5')" href="#" id="section5" class="nav-link border-lft">Trash</a>
+                    <a onclick="show(creatHTMLshowBoard()); fillBoard(); switchNavButton('1'); saveActivePageLocal(1)" href="#" id="section1" class="nav-link border-lft active">Board</a>
+                    <a onclick="show(creatHTMLshowBacklog()); fillBacklog(); switchNavButton('2'); saveActivePageLocal(2)" href="#" id="section2" class="nav-link border-lft">Backlog</a>
+                    <a onclick="show(creatHTMLshowAddTask()); switchNavButton('3'); saveActivePageLocal(3)" href="#" id="section3" class="nav-link border-lft">Add task</a>
+                    <a onclick="show(creatHTMLshowArchive()); fillArchive(); switchNavButton('4'); saveActivePageLocal(4)" href="#" id="section4" class="nav-link border-lft">Archive</a>
+                    <a onclick="show(creatHTMLshowTrash()); fillTrash(); switchNavButton('5'); saveActivePageLocal(5)" href="#" id="section5" class="nav-link border-lft">Trash</a>
                     <hr style="width:90px; margin:1rem 2.5rem">
-                    <a onclick="show(creatHTMLshowHelp());switchNavButton('6')" href="#" id="section6" class="nav-link border-lft">Help</a>
-                    <a onclick="show(creatHTMLshowAbout());switchNavButton('7')" href="#" id="section7" class="nav-link border-lft">Imprint</a>
-                    <a onclick="show(creatHTMLshowPrivacy());switchNavButton('8')" href="#" id="section8" class="nav-link border-lft">Privacy</a>
+                    <a onclick="show(creatHTMLshowHelp());switchNavButton('6'); saveActivePageLocal(6)" href="#" id="section6" class="nav-link border-lft">Help</a>
+                    <a onclick="show(creatHTMLshowAbout());switchNavButton('7'); saveActivePageLocal(7)" href="#" id="section7" class="nav-link border-lft">Imprint</a>
+                    <a onclick="show(creatHTMLshowPrivacy());switchNavButton('8'); saveActivePageLocal(8)" href="#" id="section8" class="nav-link border-lft">Privacy</a>
                     <hr style="width:90px; margin:1rem 2.5rem">
                     <a onclick="switchNavButton('9');logout()" href="#" id="section9" class="nav-link border-lft">Logout</a>
                 </div>

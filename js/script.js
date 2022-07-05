@@ -2,6 +2,8 @@ let tasks = [];
 
 let users = [];
 
+let activeUser = [];
+let activePage = [];
 
 /**
  * runs the function downloadFromServer and loads user
@@ -13,23 +15,113 @@ async function init() {
 
 
 /**
+ * Inits the Board and Renders the Tasks and Templates
+ */
+async function firstrender() {
+    await init();
+    await loadTasks();
+    loadUserLocal();
+    if (activeUser[0]){
+        
+        showActivePage(activePage[0]);
+        closeLogin();
+    } 
+    else{
+        show(creatHTMLshowBoard());
+        fillBoard();
+    }
+}
+
+
+/**
  * checks the login and runs the function closeLogin if the input is correct
  */
 
-function evaluationLogin() {
+function evaluationLogin(User, Pw) {
     eliminatFormLoop();
     let loginName = document.getElementById('lname').value;
+    if (User) loginName = User;
     let loginPw = document.getElementById('lpw').value;
+    if (Pw) loginPw = Pw;
     let login = false;
 
     for (let number = 0; number < users.length; number++) {
         const user = users[number];
         if (loginName == user.username) {
             if (loginPw == user.pw) {
+                activeUser = loginName;
+                saveUserLocal();
+                saveActivePageLocal(1);
                 closeLogin();
                 login = true;
     }}}
     if (login == false) {alert("Bitte richtiges Passwort eingeben");}
+}
+
+
+function saveUserLocal() {
+    let activeUserAsText = JSON.stringify(activeUser);
+
+    localStorage.setItem('User', activeUserAsText);
+}
+
+function saveActivePageLocal(pageNumber) {
+    activePage = [pageNumber];
+    let activePageAsText = JSON.stringify(activePage);
+
+    localStorage.setItem('Page', activePageAsText);
+}
+
+
+function loadUserLocal() {
+    let activeUserAsText = localStorage.getItem('User');
+    let activePageAsText = localStorage.getItem('Page');
+
+    if (activeUserAsText && activePageAsText) {
+        activeUser = JSON.parse(activeUserAsText);
+        activePage = JSON.parse(activePageAsText);
+    }
+}
+
+
+function showActivePage(pageNumber){
+    if (pageNumber == 1){
+        show(creatHTMLshowBoard()); 
+        fillBoard();
+        // switchNavButton('1');
+    }
+    else if (pageNumber == 2){
+        show(creatHTMLshowBacklog()); 
+        fillBacklog(); 
+        // switchNavButton('2')
+    }
+    else if (pageNumber == 3){
+        show(creatHTMLshowAddTask()); 
+        // switchNavButton('3')
+    }
+    else if (pageNumber == 4){
+        show(creatHTMLshowArchive()); 
+        fillArchive(); 
+        // switchNavButton('4')
+    }
+    else if (pageNumber == 5){
+        show(creatHTMLshowTrash()); 
+        fillTrash(); 
+        // switchNavButton('5')
+    }
+    else if (pageNumber == 6){
+        show(creatHTMLshowHelp());
+        // switchNavButton('6')
+    }
+    else if (pageNumber == 7){
+        show(creatHTMLshowAbout());
+        // switchNavButton('7')
+    }
+    else if (pageNumber == 8){
+        show(creatHTMLshowPrivacy());
+        // switchNavButton('8');
+    }
+    switchNavButton(`${pageNumber}`);
 }
 
 
@@ -65,17 +157,6 @@ function logout() {
     document.getElementById('lname').value = '';
     document.getElementById('lpw').value = '';
     document.getElementById('show-menu').classList.add('d-none');
-}
-
-
-/**
- * Inits the Board and Renders the Tasks and Templates
- */
-async function firstrender() {
-    await init();
-    await loadTasks();
-    show(creatHTMLshowBoard());
-    fillBoard();
 }
 
 
