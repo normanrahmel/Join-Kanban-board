@@ -135,6 +135,8 @@ async function closeLogin() {
  * open the loginScreen and removes the input
  */
 function logout() {
+    activeUser = [];
+    saveUserLocal();
     document.getElementById('loginScreen').classList.remove('d-none');
     document.getElementById('rightSideComplete').classList.add('d-none');
     document.getElementById('leftSideComplete').classList.add('d-none');
