@@ -1,4 +1,4 @@
-function creatHTMLshowAddTask() {
+function creatHTMLshowAddTask(activeUser) {
     return /*html*/ `
 <div class="task-section">
     <div class="section-headline">
@@ -40,7 +40,7 @@ function creatHTMLshowAddTask() {
 
                 <div class="form-field">
                     <label for="taskEmployees">User: </label>
-                    <input class="task-input" type="text" id="taskEmployees" placeholder="add User..." required>
+                    <input class="task-input" type="text" id="taskEmployees" value="${activeUser}" placeholder="add User..." required>
                 </div>
                 <div class="task-button">
                     <button class="task-submit" type="submit" onclick="">Submit</button>

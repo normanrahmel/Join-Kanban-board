@@ -92,7 +92,7 @@ function showActivePage(pageNumber){
         show(creatHTMLshowBacklog()); 
         fillBacklog();}
     else if (pageNumber == 3)
-        show(creatHTMLshowAddTask()); 
+        show(creatHTMLshowAddTask(activeUser)); 
     else if (pageNumber == 4){
         show(creatHTMLshowArchive()); 
         fillArchive();}
