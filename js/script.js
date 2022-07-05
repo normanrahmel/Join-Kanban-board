@@ -87,40 +87,24 @@ function loadUserLocal() {
 function showActivePage(pageNumber){
     if (pageNumber == 1){
         show(creatHTMLshowBoard()); 
-        fillBoard();
-        // switchNavButton('1');
-    }
+        fillBoard();}
     else if (pageNumber == 2){
         show(creatHTMLshowBacklog()); 
-        fillBacklog(); 
-        // switchNavButton('2')
-    }
-    else if (pageNumber == 3){
+        fillBacklog();}
+    else if (pageNumber == 3)
         show(creatHTMLshowAddTask()); 
-        // switchNavButton('3')
-    }
     else if (pageNumber == 4){
         show(creatHTMLshowArchive()); 
-        fillArchive(); 
-        // switchNavButton('4')
-    }
+        fillArchive();}
     else if (pageNumber == 5){
         show(creatHTMLshowTrash()); 
-        fillTrash(); 
-        // switchNavButton('5')
-    }
-    else if (pageNumber == 6){
-        show(creatHTMLshowHelp());
-        // switchNavButton('6')
-    }
-    else if (pageNumber == 7){
-        show(creatHTMLshowAbout());
-        // switchNavButton('7')
-    }
-    else if (pageNumber == 8){
-        show(creatHTMLshowPrivacy());
-        // switchNavButton('8');
-    }
+        fillTrash();}
+    else if (pageNumber == 6)
+        show(creatHTMLshowHelp());    
+    else if (pageNumber == 7)
+        show(creatHTMLshowAbout());    
+    else if (pageNumber == 8)
+        show(creatHTMLshowPrivacy());    
     switchNavButton(`${pageNumber}`);
 }
 
