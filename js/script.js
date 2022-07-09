@@ -61,14 +61,12 @@ function evaluationLogin(User, Pw) {
 
 function saveUserLocal() {
     let activeUserAsText = JSON.stringify(activeUser);
-
     localStorage.setItem('User', activeUserAsText);
 }
 
 function saveActivePageLocal(pageNumber) {
     activePage = [pageNumber];
     let activePageAsText = JSON.stringify(activePage);
-
     localStorage.setItem('Page', activePageAsText);
 }
 
@@ -76,14 +74,16 @@ function saveActivePageLocal(pageNumber) {
 function loadUserLocal() {
     let activeUserAsText = localStorage.getItem('User');
     let activePageAsText = localStorage.getItem('Page');
-
     if (activeUserAsText && activePageAsText) {
         activeUser = JSON.parse(activeUserAsText);
         activePage = JSON.parse(activePageAsText);
     }
 }
 
-
+/**
+ * Switch Pages over Navigation
+ * @param {var} pageNumber 
+ */
 function showActivePage(pageNumber){
     if (pageNumber == 1){
         show(creatHTMLshowBoard()); 
