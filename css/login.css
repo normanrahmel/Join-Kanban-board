@@ -2,13 +2,16 @@
     display: none;
 }
 
+
+/*/projects/join-kanban-board/img/login2-0.jpg*/
+
 .login-screen {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-image: url("/projects/join-kanban-board/img/login2-0.jpg");
+    background-image: url("https://join.norman-rahmel.com/img/login2-0.jpg");
     background-size: cover;
 }
 

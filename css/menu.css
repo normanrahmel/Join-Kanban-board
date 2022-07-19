@@ -10,7 +10,7 @@
     width: 180px;
     background-color: rgba(41, 49, 51, 1);
     align-items: start;
-    background-image: url("/projects/join-kanban-board/img/bgr1.jpeg");
+    background-image: url("https://join.norman-rahmel.com/img/bgr1.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: repeat-y;
@@ -63,7 +63,6 @@
     font-size: 12px;
     color: #d6cecc;
 }
-
 
 
 /*
@@ -339,7 +338,6 @@ DEPENDENCES
 }
 
 
-
 /*
   =====
   SETTINGS
@@ -357,6 +355,7 @@ DEPENDENCES
 .menu_activated {
     --menuHaburgerOutlineColor: var(--colorWhite);
 }
+
 
 /*
   =====
@@ -423,4 +422,3 @@ body {
     }
 }
   */
-
